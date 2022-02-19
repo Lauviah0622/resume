@@ -1,0 +1,18 @@
+---
+import Project from './Project.astro'
+import Header from '../../components/Header/Header.astro'
+
+const projects = Astro.fetchContent('./src/*.md');
+---
+<div>
+    <Header>
+        Projects
+    </Header>
+    {projects.map(project => (
+        <Project 
+            cover={project.cover} 
+            desc={project.astro.source}
+            title={project.title}
+            />
+    ))}    
+</div>

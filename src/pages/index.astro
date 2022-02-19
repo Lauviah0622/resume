@@ -1,0 +1,58 @@
+---
+// Component Imports
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+import Intro from '../content/Intro/index.astro'
+import Projects from '../content/Projects/index.astro'
+import Skill from '../content/Skill/index.astro'
+import Experience from '../content/Experience/index.astro'
+import Contact from '../content/Contact/index.astro'
+
+---
+<style>
+	html {
+		padding: 0;
+	}
+
+	body {
+		padding: 0;
+		display: flex;
+	}
+
+	main {
+		margin: 4em auto;
+		padding: 2em;
+		border: 1px solid black;
+		box-sizing: border-box;
+		min-height: calc(100vh - 8em);
+		max-width: 960px;
+	}
+</style>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+			body {
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<Intro/>
+			<Projects/>
+			<Skill/>
+			<Experience/>
+			<Contact/>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+---
+import { Markdown } from 'astro/components'
+
+const data = Astro.fetchContent('./intro.md')
+const intro = data[0]
+const cover = intro.cover;
+
+---
+
+
+<style lang="scss">
+    .container {
+        display: flex;
+
+        & :global(h2)  {
+            color: aqua
+        }
+
+        .avatar {
+            
+        }
+    }
+
+    .avatar {
+        height: 20em;
+        width: auto;
+        flex-shrink: 0;
+        & img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .content {
+
+    }
+</style>
+<div class="container">
+    <div class="avatar">
+        <img src="/avatar.jpg" alt="avatar">
+    </div>
+    
+    <div class="content">
+        <Markdown slot="content">
+            {intro.astro.source}
+        </Markdown>
+    </div>
+</div>

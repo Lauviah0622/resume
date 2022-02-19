@@ -1,0 +1,38 @@
+---
+import { Markdown } from 'astro/components';
+
+
+export interface Props {
+    to: string; 
+    from: string; 
+    company: string;
+    title:string;
+    desc:string
+}
+
+const {to, from, company, title, desc} = Astro.props;
+---
+<style>
+    .container {
+        display: flex;
+    }
+
+    .cover {
+        width: 20em;
+
+        & img {
+            height: auto;
+            width: 100%;
+        }
+    }
+</style>
+<div class="container">
+    <div class="cover">
+        <h4>{title}</h4>
+        <p>{company}</p>
+        <p>{from} - {to}</p>
+    </div>
+    <div>
+        <Markdown content={desc}/>
+    </div>
+</div>

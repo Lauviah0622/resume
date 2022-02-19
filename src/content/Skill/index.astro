@@ -1,0 +1,21 @@
+---
+import { Markdown } from 'astro/components'
+import Header from '../../components/Header/Header.astro'
+
+const data = Astro.fetchContent('./skill.md');
+const skill = data[0]
+---
+<style>
+    .content {
+        column-count: 2;
+    }
+    
+</style>
+<div>
+    <Header>
+        Skills
+    </Header>
+    <div class="content">
+        <Markdown content={skill.astro.source} />
+    </div>
+</div>
