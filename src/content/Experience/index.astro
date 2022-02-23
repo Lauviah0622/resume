@@ -2,23 +2,25 @@
 import Period from './Period.astro'
 import Header from '../../components/Header/Header.astro'
 
-const periods = Astro.fetchContent('./src/*.tw.md');
+const periods = Astro.fetchContent('./src/*.md');
 ---
 
 <style>
 
 </style>
-<div>
+<section>
     <Header>
         Experiece
     </Header>
-    {periods.map(period => (
-        <Period 
-            to={period.to}
-            from={period.from}
-            title={period.title}
-            desc={period.astro.source}
-            company={period.company}
-            />
-    ))}    
-</div>
+    <div class="content">
+        {periods.sort().map(period => (
+            <Period 
+                to={period.to}
+                from={period.from}
+                title={period.title}
+                desc={period.astro.source}
+                company={period.company}
+                />
+        ))}    
+    </div>
+</section>

@@ -8,9 +8,20 @@
 
 // @ts-check
 
-const lang = 'tw'
-
 export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the React renderer to support React JSX components.
 	renderers: ['@astrojs/renderer-react'],
+	markdownOptions: {
+		render: [
+			'@astrojs/markdown-remark',
+			{
+				rehypePlugins: [
+					'remark-gfm',
+					'remark-smartypants',
+					['rehype-external-links',
+					{target:"_blank"}]
+				]
+			}
+		]
+	}
 });

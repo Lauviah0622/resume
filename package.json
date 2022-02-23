@@ -12,7 +12,7 @@
     "astro": "^0.22.20",
     "autoprefixer": "^10.4.2",
     "dayjs": "^1.10.7",
-    "postcss-nesting": "^10.1.2"
+    "postcss-nesting": "^10.1.2",
+    "rehype-external-links": "^1.0.1"
   }
-  
 }

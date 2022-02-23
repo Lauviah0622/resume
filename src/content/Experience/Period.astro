@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components';
+import dayjs from 'dayjs';
 
 
 export interface Props {
@@ -10,15 +11,47 @@ export interface Props {
     desc:string
 }
 
+const formatDate =(date) => {
+    if (date === 'current') return date
+    return dayjs(date).format('MMM YYYY')
+}
+
 const {to, from, company, title, desc} = Astro.props;
 ---
 <style>
     .container {
         display: flex;
+        margin-block-end: 2em;
+
+        & .content *:nth-child(1) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 720px) { 
+            flex-direction: column;
+        }
     }
 
     .cover {
-        width: 20em;
+        width: 15em;
+        padding-right: 2em;
+        box-sizing: border-box;
+        flex: auto 0 0;
+
+        & p {
+            margin-block: 0 0;
+        }
+
+        & h3 {
+            margin-block-end: .2em;
+        }
+
+        & h6 {
+            margin-block-start: .0em;
+            color: var(--color-text-secondary);
+            font-weight: 300;
+
+        }
 
         & img {
             height: auto;
@@ -28,11 +61,11 @@ const {to, from, company, title, desc} = Astro.props;
 </style>
 <div class="container">
     <div class="cover">
-        <h4>{title}</h4>
-        <p>{company}</p>
-        <p>{from} - {to}</p>
+        <h3>{title}</h3>
+            <p>{company}</p>
+            <h6>{formatDate(from)} - {formatDate(to)}</h6>
     </div>
-    <div>
+    <div class="content">
         <Markdown content={desc}/>
     </div>
 </div>

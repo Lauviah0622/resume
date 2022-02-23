@@ -2,34 +2,62 @@
 import { Markdown } from 'astro/components'
 
 
+
 export interface Props {
     cover: string;
     title: string;
     desc: string;
+    link: string;
 }
 
-const {cover, desc, title} = Astro.props;
+const {cover, desc, title, link} = Astro.props;
 ---
 <style>
     .container {
         display: flex;
+        margin-bottom: 2em;
+        @media (max-width: 720px) { 
+            flex-direction: column;
+        }
     }
 
     .cover {
+        
         width: 20em;
+        padding-right: 3em;
+        /* padding-top: 1.5em; */
+        flex: auto 0 0;
+        
 
         & img {
             height: auto;
             width: 100%;
+
+        }
+
+        @media (max-width: 720px) { 
+            flex-direction: column;
+            width: 90%;
+            
+            margin: 2em auto;
+            padding-right: 0;
+
+            & img {
+                height: 100%;
+                max-height: 30vh;
+            }
         }
     }
 </style>
-<div class="container">
+
+
+<div class="container content">
     <div class="cover">
         <img src={cover}/>
     </div>
     <div>
-        <h4>{title}</h4>
+        {link ?  <h3><a target="_blank" href="https://lavi-blog.vercel.app/">{title}</a></h3>
+                 : <h3>{title}</h3>}
         <Markdown content={desc}/>
     </div>
 </div>

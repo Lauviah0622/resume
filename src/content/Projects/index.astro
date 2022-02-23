@@ -1,18 +1,17 @@
 ---
 import Project from './Project.astro'
 import Header from '../../components/Header/Header.astro'
+import Block from '../../components/Block/Block.astro'
 
 const projects = Astro.fetchContent('./src/*.md');
 ---
-<div>
-    <Header>
-        Projects
-    </Header>
+<Block header="Projects">
     {projects.map(project => (
         <Project 
             cover={project.cover} 
             desc={project.astro.source}
             title={project.title}
+            link={project.link}
             />
-    ))}    
-</div>
+    ))}  
+</Block>

@@ -1,13 +1,10 @@
 ---
 import { Markdown } from 'astro/components';
-import Header from '../../components/Header/Header.astro'
+import Block from '../../components/Block/Block.astro'
 
 const contact = Astro.fetchContent('./contact.md');
 ---
 
-<div>
-    <Header>
-        Experiece
-    </Header>
+<Block header="Experiece">
     <Markdown content={contact[0].astro.source}/>
-</div>
+</Block>

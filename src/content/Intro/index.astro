@@ -3,39 +3,50 @@ import { Markdown } from 'astro/components'
 
 const data = Astro.fetchContent('./intro.md')
 const intro = data[0]
-const cover = intro.cover;
 
 ---
 
 
 <style lang="scss">
-    .container {
+    .intro {
         display: flex;
-
         & :global(h2)  {
-            color: aqua
+            color: var(--color-secondary);
+            font-size: 2em;
+            font-weight: 400;
+
         }
 
-        .avatar {
+        @media (max-width: 720px) { 
+            flex-direction: column;
             
         }
     }
 
     .avatar {
         height: 20em;
-        width: auto;
         flex-shrink: 0;
-        & img{
-            height: 100%;
-            width: 100%;
+        @media (max-width: 720px) { 
+            width: 70%;
+            margin: 15% auto;
         }
     }
 
     .content {
-
+        padding-right: 0px;
+        padding-left: 3em;
+        @media (max-width: 720px) { 
+            h2 {
+                text-align: center;
+            }
+            padding-left: 0;
+            padding: 0 1em;
+        }
     }
+
+    
 </style>
-<div class="container">
+<section class="intro">
     <div class="avatar">
         <img src="/avatar.jpg" alt="avatar">
     </div>
@@ -45,4 +56,4 @@ const cover = intro.cover;
             {intro.astro.source}
         </Markdown>
     </div>
-</div>
+</section>

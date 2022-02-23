@@ -1,21 +1,35 @@
 ---
 import { Markdown } from 'astro/components'
-import Header from '../../components/Header/Header.astro'
+import Block from '../../components/Block/Block.astro'
 
 const data = Astro.fetchContent('./skill.md');
 const skill = data[0]
 ---
 <style>
-    .content {
+    .skill {
         column-count: 2;
+        column-rule: solid var(--color-secondary);
+        column-gap: 3em;
+        & :global(h3) {
+            margin-block-end: .5em;
+        }
+            
+
+        @media (max-width: 720px) { 
+            column-count: 1;
+            & :global(h4) {
+                margin-block-end: .5em;
+            }
+            
+            & :global(br) {
+                display: none;
+            }
+        }
     }
-    
+
 </style>
-<div>
-    <Header>
-        Skills
-    </Header>
-    <div class="content">
-        <Markdown content={skill.astro.source} />
+<Block header="Skill">
+    <div class="skill content">
+        <Markdown content={skill.astro.source}/>
     </div>
-</div>
+</Block>

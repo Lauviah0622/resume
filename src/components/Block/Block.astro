@@ -1,0 +1,18 @@
+---
+import Header from '../Header/Header.astro';
+
+export interface Props{
+    header: string
+}
+
+const {header} = Astro.props;
+---
+
+<section>
+    <Header>
+        {header}
+    </Header>
+    <div> 
+        <slot/>
+    </div>
+</section>

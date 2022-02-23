@@ -1,0 +1,139 @@
+:root {
+  --color-primary: #aec2a1;
+  --color-secondary: #52712f;
+  --color-text: #363636;
+  --color-text-secondary: #717070;
+  --color-bg: #ffffff;
+  --color-bg-secondary: #e7dad2;
+
+  --shadow-color: 36deg 12% 58%;
+
+  --shadow-elevation-medium: 0.2px 0.4px 0.5px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.2px 1.6px -0.8px hsl(var(--shadow-color) / 0.36),
+    1.9px 3.1px 4.1px -1.7px hsl(var(--shadow-color) / 0.36),
+    4.6px 7.6px 10px -2.5px hsl(var(--shadow-color) / 0.36);
+
+  --shadow-elevation-high: 0.2px 0.4px 0.5px hsl(var(--shadow-color) / 0.34),
+    1.3px 2.2px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.5px 4.1px 5.4px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.1px 6.8px 8.9px -1.1px hsl(var(--shadow-color) / 0.34),
+    6.5px 10.8px 14.2px -1.4px hsl(var(--shadow-color) / 0.34),
+    10.2px 16.9px 22.2px -1.8px hsl(var(--shadow-color) / 0.34),
+    15.5px 25.6px 33.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    22.9px 37.8px 49.7px -2.5px hsl(var(--shadow-color) / 0.34);
+  /* https://www.joshwcomeau.com/shadow-palette/ */
+}
+
+html {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  
+  background: var(--color-bg-secondary);
+
+  @media (max-width: 720px) { 
+      width: 100vw;
+    /* font-size: 40px; */
+   }
+}
+
+body {
+  padding: 0;
+  display: flex;
+}
+
+main {
+  margin: 4em auto;
+  padding: 4em;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-elevation-high);
+  min-height: calc(100vh - 8em);
+  max-width: 960px;
+  background-color: var(--color-bg);
+
+  @media (max-width: 720px) { 
+    padding: 1em 1em;
+    width: 100%;
+    margin: 0;
+   }
+}
+
+.content {
+  padding: 0 12px;
+  
+  @media (max-width: 720px) { 
+    padding: 0 8px;
+   }
+}
+
+div {
+  box-sizing: border-box;
+}
+
+section {
+  margin-block-end: 3em;
+}
+
+img {
+  box-shadow: var(--shadow-elevation-medium);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h2,
+h3,
+h4,
+h5
+ {
+  margin-block-start: 0;
+}
+
+h3 {
+  font-size: 1.35em;
+  color: var(--color-secondary);
+}
+
+h4 {
+  font-size: 1.1em;
+  color: var(--color-test);
+}
+
+p:only-of-type(1) {
+    margin-block-start: 0;
+}
+
+ul {
+  padding-left: 1em;
+
+  & li {
+    line-height: 1.5em;
+  }
+}
+
+a {
+  color: var(--color-secondary);
+  /* text-decoration: none; */
+
+  & > * {
+  }
+
+  & * {
+    display: inline-block;
+  }
+
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="olive" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"/></svg>');
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+}
+
+@media (max-width: 720px) { 
+    ul {
+        padding-left: 2em;
+        padding-right: 1em;
+        margin-block-start: 0;
+        margin-block-end: 2em;
+    }
+}
