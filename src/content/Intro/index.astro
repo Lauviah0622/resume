@@ -34,7 +34,7 @@ const intro = data[0]
 
     .content {
         padding-right: 0px;
-        padding-left: 3em;
+        /* padding-left: 3em; */
         @media (max-width: 720px) { 
             h2 {
                 text-align: center;
@@ -47,10 +47,6 @@ const intro = data[0]
     
 </style>
 <section class="intro">
-    <div class="avatar">
-        <img src="/avatar.jpg" alt="avatar">
-    </div>
-    
     <div class="content">
         <Markdown slot="content">
             {intro.astro.source}

@@ -5,6 +5,23 @@ import Block from '../../components/Block/Block.astro'
 const contact = Astro.fetchContent('./contact.md');
 ---
 
-<Block header="Experiece">
-    <Markdown content={contact[0].astro.source}/>
+<style>
+    .contact {
+        display: flex;
+        & h3 {
+            flex: 8em 1 0;
+        }
+
+        & > p {
+            margin-top: 0;
+            line-height: 26px;
+            white-space: break-spaces;
+            padding: 0 1em
+        }
+    }
+</style>
+<Block header="Contact">
+    <div class="contact">
+        <Markdown content={contact[0].astro.source} />
+    </div>
 </Block>
