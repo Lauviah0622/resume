@@ -19,6 +19,11 @@ const {cover, desc, title, link} = Astro.props;
         @media (max-width: 720px) { 
             flex-direction: column;
         }
+
+        @print {
+            display: block;
+            margin-bottom: 0;
+        }
     }
 
     .cover {
@@ -47,6 +52,8 @@ const {cover, desc, title, link} = Astro.props;
                 max-height: 30vh;
             }
         }
+
+        
     }
 </style>
 

@@ -13,10 +13,18 @@ const contact = Astro.fetchContent('./contact.md');
         }
 
         & > p {
+            flex: auto .5 0;
             margin-top: 0;
             line-height: 26px;
             white-space: break-spaces;
             padding: 0 1em
+        }
+
+    }
+
+    @media print {   
+        .contact {
+            display: block;
         }
     }
 </style>
