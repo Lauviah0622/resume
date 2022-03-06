@@ -1,12 +1,21 @@
 ---
 import Project from './Project.astro'
-import Header from '../../components/Header/Header.astro'
 import Block from '../../components/Block/Block.astro'
+import multilangSpliter from '../../utils/multilangSpliter.js'
 
-const projects = Astro.fetchContent('./src/*.md');
+export interface Props{
+    lang: 'en' | 'tw'
+}
+
+const contact = Astro.fetchContent('./src/*.md');
+
+const md = multilangSpliter(contact)
+
+const { lang = 'tw' } = Astro.props;
+
 ---
 <Block header="Projects">
-    {projects.map(project => (
+    {md[lang].map(project => (
         <Project 
             cover={project.cover} 
             desc={project.astro.source}

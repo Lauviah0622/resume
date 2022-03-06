@@ -54,7 +54,8 @@ main {
   @media print {
     width: 100%;
     box-shadow: none;
-    font-size: 12px;
+    font-size: 10pt;
+    padding: 1cm;
   }
 
   @media (max-width: 720px) { 
@@ -78,7 +79,16 @@ div {
 
 section {
   margin-block-end: 3em;
+  page-break-inside:avoid;
+  
+  @media print {
+    padding: 1cm;
+    padding-bottom: 0cm;
+    margin: 0;
+  }
 }
+
+
 
 img {
   box-shadow: var(--shadow-elevation-medium);
@@ -120,8 +130,7 @@ ul {
 a {
   color: var(--color-secondary);
   position: relative;
-  margin-right: 1.5ch;
-  /* text-decoration: none; */
+  margin-right: .5ch;
 
   & > * {
   }
@@ -135,15 +144,14 @@ a {
   &::after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="olive" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"/></svg>');
     display: inline-block;
-    position: absolute;
-    bottom: -0.1em;
-    right: -1.3ch
+    height: 0;
   }
 }
 
 @media print {
   a {
     display:block; 
+    text-decoration: none;
 
     &::after {
       content: " [" attr(href) "]";
@@ -156,11 +164,12 @@ a {
   
 
   img {
-    width: auto !important; 
-    height: 200pt !important;
+    display: none !important; 
+    /* width: auto !important; 
+    height: 100pt !important;
     margin: auto;
     break-inside:avoid;
-    break-after:avoid;
+    break-after:avoid; */
   }
 
   
@@ -175,7 +184,8 @@ p, img {
 ul, ol  { break-before:avoid }
 
 @page { 
-    /* margin: 0mm; */
+    margin: 0mm;
+    size: A4 potrait;
 }
 
 @page:left, @page:right {

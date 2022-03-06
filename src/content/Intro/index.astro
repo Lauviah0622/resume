@@ -1,8 +1,22 @@
 ---
 import { Markdown } from 'astro/components'
 
-const data = Astro.fetchContent('./intro.md')
-const intro = data[0]
+import multilangSpliter from '../../utils/multilangSpliter.js'
+
+export interface Props{
+    lang: 'en' | 'tw'
+}
+
+const contact = Astro.fetchContent('./*.md');
+
+const md = multilangSpliter(contact)
+
+const { lang = 'tw' } = Astro.props;
+
+// const data = Astro.fetchContent('./intro.tw.md')
+// const intro = data[0]
+
+
 
 ---
 
@@ -21,6 +35,10 @@ const intro = data[0]
             flex-direction: column;
             
         }
+
+        @media print {
+            display: block;
+        }
     }
 
     .avatar {
@@ -34,6 +52,7 @@ const intro = data[0]
 
     .content {
         padding-right: 0px;
+        line-height: 1.8em;
         /* padding-left: 3em; */
         @media (max-width: 720px) { 
             h2 {
@@ -49,7 +68,7 @@ const intro = data[0]
 <section class="intro">
     <div class="content">
         <Markdown slot="content">
-            {intro.astro.source}
+            {md[lang][0].astro.source}
         </Markdown>
     </div>
 </section>

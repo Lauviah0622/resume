@@ -1,8 +1,17 @@
 ---
 import { Markdown } from 'astro/components';
 import Block from '../../components/Block/Block.astro'
+import multilangSpliter from '../../utils/multilangSpliter.js'
 
-const contact = Astro.fetchContent('./contact.md');
+export interface Props{
+    lang: 'en' | 'tw'
+}
+
+const contact = Astro.fetchContent('./*.md');
+
+const md = multilangSpliter(contact)
+
+const { lang = 'tw' } = Astro.props;
 ---
 
 <style>
@@ -24,12 +33,23 @@ const contact = Astro.fetchContent('./contact.md');
 
     @media print {   
         .contact {
-            display: block;
+            flex-direction: column;
+            & h3 {
+                display: none;
+                flex: none;
+            }
+
+            & > p {
+                flex: none !important;
+                margin-top: 1em !important;
+                line-height: 1em !important; 
+                padding: 0
+            }
         }
     }
 </style>
 <Block header="Contact">
     <div class="contact">
-        <Markdown content={contact[0].astro.source} />
+        <Markdown content={md[lang][0].astro.source} />
     </div>
 </Block>

@@ -20,24 +20,17 @@ const {cover, desc, title, link} = Astro.props;
             flex-direction: column;
         }
 
-        @print {
-            display: block;
-            margin-bottom: 0;
-        }
-    }
-
-    .cover {
         
+    }
+    
+    .cover {
         width: 20em;
         padding-right: 3em;
-        /* padding-top: 1.5em; */
         flex: auto 0 0;
-        
 
         & img {
             height: auto;
             width: 100%;
-
         }
 
         @media (max-width: 720px) { 
@@ -52,8 +45,17 @@ const {cover, desc, title, link} = Astro.props;
                 max-height: 30vh;
             }
         }
+    }
 
-        
+    @media print {
+        .container {
+            margin: 0 !important;
+
+        }
+
+        .cover {
+            display: none !important;
+        }
     }
 </style>
 
@@ -62,7 +64,7 @@ const {cover, desc, title, link} = Astro.props;
     <div class="cover">
         <img src={cover}/>
     </div>
-    <div>
+    <div class="test">
         {link ?  <h3><a target="_blank" href="https://lavi-blog.vercel.app/">{title}</a></h3>
                  : <h3>{title}</h3>}
         <Markdown content={desc}/>

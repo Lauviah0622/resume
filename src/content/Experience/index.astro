@@ -1,25 +1,32 @@
 ---
 import Period from './Period.astro'
 import Header from '../../components/Header/Header.astro'
+import multilangSpliter from '../../utils/multilangSpliter.js'
 
-const periods = Astro.fetchContent('./src/*.md');
+export interface Props{
+    lang: 'en' | 'tw'
+}
+
+const contact = Astro.fetchContent('./src/*.md');
+
+const md = multilangSpliter(contact)
+
+const { lang = 'tw' } = Astro.props;
 ---
 
-<style>
-
-</style>
 <section>
     <Header>
         Experiece
     </Header>
     <div class="content">
-        {periods.sort().map(period => (
+        {md[lang].sort().map(period => (
             <Period 
                 to={period.to}
                 from={period.from}
                 title={period.title}
                 desc={period.astro.source}
                 company={period.company}
+                type={period.type}
                 />
         ))}    
     </div>

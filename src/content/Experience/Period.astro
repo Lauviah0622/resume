@@ -4,11 +4,12 @@ import dayjs from 'dayjs';
 
 
 export interface Props {
-    to: string; 
-    from: string; 
-    company: string;
-    title:string;
+    to: string
+    from: string
+    company: string
+    title:string
     desc:string
+    type: string
 }
 
 const formatDate =(date) => {
@@ -16,7 +17,7 @@ const formatDate =(date) => {
     return dayjs(date).format('MMM YYYY')
 }
 
-const {to, from, company, title, desc} = Astro.props;
+const {to, from, company, title, desc, type} = Astro.props;
 ---
 <style>
     .container {
@@ -57,15 +58,25 @@ const {to, from, company, title, desc} = Astro.props;
             height: auto;
             width: 100%;
         }
+
+        &.noTitle {
+            width: auto
+        }
+
+        @media print {
+            width: auto;
+        }
     }
 </style>
 <div class="container">
-    <div class="cover">
+    <div class={`cover ${type === 'school' && 'noTitle'}`}>
         <h3>{title}</h3>
             <p>{company}</p>
             <h6>{formatDate(from)} - {formatDate(to)}</h6>
     </div>
-    <div class="content">
-        <Markdown content={desc}/>
-    </div>
+    {type !== 'school' && 
+        <div class="content">
+            <Markdown content={desc}/>
+        </div>
+    }
 </div>
