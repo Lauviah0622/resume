@@ -2,7 +2,7 @@
 title: Front-end developer
 company: Feversocial
 from: "2021-08-06"
-to: "current"
+to: "2022-04-19"
 
 ---
 - Develope and maintain multi-language commercial web game on desktop, mobile and webview device to customer.
