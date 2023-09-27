@@ -10,9 +10,9 @@ type LangMDs = Partial<Record<(typeof langs)[number], MD[]>>;
 
 const isHidedFileName = (filename: string) => filename.match(/\/_\w+.\w+.md/g);
 
-function spliter(allFiles: MD[], lang, isFiles?: false): MD;
-function spliter(allFiles: MD[], lang, isFiles?: true): MD[];
-function spliter(allFiles: MD[], lang, isFiles?: boolean): MD | MD[] {
+function splitter(allFiles: MD[], lang, isFiles?: false): MD;
+function splitter(allFiles: MD[], lang, isFiles?: true): MD[];
+function splitter(allFiles: MD[], lang, isFiles?: boolean): MD | MD[] {
   const mds: LangMDs = {};
 
   for (const key of langs) {
@@ -22,8 +22,6 @@ function spliter(allFiles: MD[], lang, isFiles?: boolean): MD | MD[] {
     const files = mds[key];
     const filenameMatch = new RegExp(`\.${key}\.md$`);
     const langFiles = allFiles.filter((md) => {
-      console.log(md.file, isHidedFileName(md.file));
-
       return md.file.match(filenameMatch) && !isHidedFileName(md.file);
     });
     files.push(...langFiles);
@@ -32,4 +30,4 @@ function spliter(allFiles: MD[], lang, isFiles?: boolean): MD | MD[] {
   return isFiles ? mds[lang] : mds[lang][0];
 }
 
-export default spliter;
+export default splitter;

@@ -20,7 +20,7 @@ const mds = multilangSpliter(files, lang, true);
 <Block header="Projects">
   <div class="content">
     {
-      mds.sort().map(({ frontmatter, Content }) => {
+      mds.map(({ frontmatter, Content }) => {
         return (
           <Project title={frontmatter.title} link={frontmatter.link}>
             <Content />
