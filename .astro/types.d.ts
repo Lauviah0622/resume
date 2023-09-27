@@ -174,97 +174,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"Experience": {
-"src/fever.en.md": {
-	id: "src/fever.en.md";
-  slug: "src/feveren";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-"src/fever.tw.md": {
-	id: "src/fever.tw.md";
-  slug: "src/fevertw";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-"src/inspire.en.md": {
-	id: "src/inspire.en.md";
-  slug: "src/inspireen";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-"src/inspire.tw.md": {
-	id: "src/inspire.tw.md";
-  slug: "src/inspiretw";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-"src/tku.en.md": {
-	id: "src/tku.en.md";
-  slug: "src/tkuen";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-"src/tku.tw.md": {
-	id: "src/tku.tw.md";
-  slug: "src/tkutw";
-  body: string;
-  collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-};
-"Projects": {
-"src/blog.en.md": {
-	id: "src/blog.en.md";
-  slug: "src/blogen";
-  body: string;
-  collection: "Projects";
-  data: any
-} & { render(): Render[".md"] };
-"src/blog.tw.md": {
-	id: "src/blog.tw.md";
-  slug: "src/blogtw";
-  body: string;
-  collection: "Projects";
-  data: any
-} & { render(): Render[".md"] };
-"src/pickel.en.md": {
-	id: "src/pickel.en.md";
-  slug: "src/pickelen";
-  body: string;
-  collection: "Projects";
-  data: any
-} & { render(): Render[".md"] };
-"src/pickel.tw.md": {
-	id: "src/pickel.tw.md";
-  slug: "src/pickeltw";
-  body: string;
-  collection: "Projects";
-  data: any
-} & { render(): Render[".md"] };
-};
-"Skill": {
-"skill.en.md": {
-	id: "skill.en.md";
-  slug: "skillen";
-  body: string;
-  collection: "Skill";
-  data: any
-} & { render(): Render[".md"] };
-"skill.tw.md": {
-	id: "skill.tw.md";
-  slug: "skilltw";
-  body: string;
-  collection: "Skill";
-  data: any
-} & { render(): Render[".md"] };
-};
-"contact": {
+		"contact": {
 "contact.en.md": {
 	id: "contact.en.md";
   slug: "contacten";
@@ -277,6 +187,36 @@ declare module 'astro:content' {
   slug: "contacttw";
   body: string;
   collection: "contact";
+  data: any
+} & { render(): Render[".md"] };
+};
+"experience": {
+"fever.en.md": {
+	id: "fever.en.md";
+  slug: "feveren";
+  body: string;
+  collection: "experience";
+  data: any
+} & { render(): Render[".md"] };
+"fever.tw.md": {
+	id: "fever.tw.md";
+  slug: "fevertw";
+  body: string;
+  collection: "experience";
+  data: any
+} & { render(): Render[".md"] };
+"gemini.en.md": {
+	id: "gemini.en.md";
+  slug: "geminien";
+  body: string;
+  collection: "experience";
+  data: any
+} & { render(): Render[".md"] };
+"gemini.tw.md": {
+	id: "gemini.tw.md";
+  slug: "geminitw";
+  body: string;
+  collection: "experience";
   data: any
 } & { render(): Render[".md"] };
 };
@@ -293,6 +233,45 @@ declare module 'astro:content' {
   slug: "introtw";
   body: string;
   collection: "intro";
+  data: any
+} & { render(): Render[".md"] };
+};
+"projects": {
+"blog.en.md": {
+	id: "blog.en.md";
+  slug: "blogen";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
+"blog.tw.md": {
+	id: "blog.tw.md";
+  slug: "blogtw";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
+"slate-editor.tw.md": {
+	id: "slate-editor.tw.md";
+  slug: "slate-editortw";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
+};
+"skill": {
+"skill.en.md": {
+	id: "skill.en.md";
+  slug: "skillen";
+  body: string;
+  collection: "skill";
+  data: any
+} & { render(): Render[".md"] };
+"skill.tw.md": {
+	id: "skill.tw.md";
+  slug: "skilltw";
+  body: string;
+  collection: "skill";
   data: any
 } & { render(): Render[".md"] };
 };
