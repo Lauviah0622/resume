@@ -1,17 +1,16 @@
 ---
-import Period from './Period.astro';
-import Header from '../../components/Header/Header.astro';
+import Period from '../components/Period.astro';
+import Header from '../components/Header.astro';
 import multilangSpliter, {
   type MD,
   type LangProps,
-} from '../../utils/multilangSpliter.js';
+} from '../utils/multilangSpliter.js';
 
 export interface Props extends LangProps {}
 const { lang = 'tw' } = Astro.props;
 
-const files = await Astro.glob('./src/*.md');
-const mds = (await multilangSpliter(files, lang)) as MD[];
-
+const files = await Astro.glob('../content/experience/*.md');
+const mds = multilangSpliter(files, lang) as MD[];
 ---
 
 <section>

@@ -1,16 +1,14 @@
 ---
-import Project from './Project.astro';
-import Block from '../../components/Block/Block.astro';
-import multilangSpliter, {
-  type LangProps,
-} from '../../utils/multilangSpliter.js';
+import Project from '../components/Project.astro';
+import Block from '../components/Block.astro';
+import multilangSpliter, { type LangProps } from '../utils/multilangSpliter.js';
 
 export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
 
-const files = await Astro.glob('./src/*.md');
-const mds = (await multilangSpliter(files, lang)) as MD[];
+const files = await Astro.glob('../content/projects/*.md');
+const mds = multilangSpliter(files, lang) as MD[];
 ---
 
 <Block header="Projects">

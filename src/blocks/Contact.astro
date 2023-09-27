@@ -1,15 +1,15 @@
 ---
-import Block from '../../components/Block/Block.astro';
+import Block from '../components/Block.astro';
 import multilangSpliter, {
   type MD,
   type LangProps,
-} from '../../utils/multilangSpliter.js';
+} from '../utils/multilangSpliter.js';
 
 export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
-const files = await Astro.glob('./*.md');
-const md = (await multilangSpliter(files, lang)) as MD;
+const files = await Astro.glob('../content/contact/*.md');
+const md = multilangSpliter(files, lang) as MD;
 
 const Markdown = md.Content;
 ---
@@ -17,15 +17,15 @@ const Markdown = md.Content;
 <style>
   .contact {
     display: flex;
-    flex-direction: column;
     & h3 {
       flex: 8em 1 0;
     }
 
     & > p {
+      color: blue;
       flex: auto 0.5 0;
       margin-top: 0;
-      line-height: 26px;
+      line-height: 13px;
       white-space: break-spaces;
       padding: 0 1em;
     }

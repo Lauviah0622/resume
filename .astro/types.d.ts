@@ -174,23 +174,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"Contact": {
-"contact.en.md": {
-	id: "contact.en.md";
-  slug: "contacten";
-  body: string;
-  collection: "Contact";
-  data: any
-} & { render(): Render[".md"] };
-"contact.tw.md": {
-	id: "contact.tw.md";
-  slug: "contacttw";
-  body: string;
-  collection: "Contact";
-  data: any
-} & { render(): Render[".md"] };
-};
-"Experience": {
+		"Experience": {
 "src/fever.en.md": {
 	id: "src/fever.en.md";
   slug: "src/feveren";
@@ -231,22 +215,6 @@ declare module 'astro:content' {
   slug: "src/tkutw";
   body: string;
   collection: "Experience";
-  data: any
-} & { render(): Render[".md"] };
-};
-"Intro": {
-"intro.en.md": {
-	id: "intro.en.md";
-  slug: "introen";
-  body: string;
-  collection: "Intro";
-  data: any
-} & { render(): Render[".md"] };
-"intro.tw.md": {
-	id: "intro.tw.md";
-  slug: "introtw";
-  body: string;
-  collection: "Intro";
   data: any
 } & { render(): Render[".md"] };
 };
@@ -293,6 +261,38 @@ declare module 'astro:content' {
   slug: "skilltw";
   body: string;
   collection: "Skill";
+  data: any
+} & { render(): Render[".md"] };
+};
+"contact": {
+"contact.en.md": {
+	id: "contact.en.md";
+  slug: "contacten";
+  body: string;
+  collection: "contact";
+  data: any
+} & { render(): Render[".md"] };
+"contact.tw.md": {
+	id: "contact.tw.md";
+  slug: "contacttw";
+  body: string;
+  collection: "contact";
+  data: any
+} & { render(): Render[".md"] };
+};
+"intro": {
+"intro.en.md": {
+	id: "intro.en.md";
+  slug: "introen";
+  body: string;
+  collection: "intro";
+  data: any
+} & { render(): Render[".md"] };
+"intro.tw.md": {
+	id: "intro.tw.md";
+  slug: "introtw";
+  body: string;
+  collection: "intro";
   data: any
 } & { render(): Render[".md"] };
 };

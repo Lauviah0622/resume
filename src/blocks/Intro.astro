@@ -2,13 +2,13 @@
 import multilangSpliter, {
   type MD,
   type LangProps,
-} from '../../utils/multilangSpliter.js';
+} from '../utils/multilangSpliter.js';
 
 export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
-const files = await Astro.glob('./*.md');
-const md = await multilangSpliter(files, lang) as MD;
+const files = await Astro.glob('../content/intro/*.md');
+const md = multilangSpliter(files, lang) as MD;
 
 const Markdown = md.Content;
 ---
