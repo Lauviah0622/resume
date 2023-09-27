@@ -8,7 +8,7 @@ export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
 const files = await Astro.glob('../content/intro/*.md');
-const md = multilangSpliter(files, lang) as MD;
+const md = multilangSpliter(files, lang);
 
 const Markdown = md.Content;
 ---

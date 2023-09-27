@@ -10,7 +10,7 @@ export interface Props extends LangProps {}
 const { lang = 'tw' } = Astro.props;
 
 const files = await Astro.glob('../content/skill/*.md');
-const md = multilangSpliter(files, lang) as MD;
+const md = multilangSpliter(files, lang);
 ---
 
 <style>
@@ -36,6 +36,6 @@ const md = multilangSpliter(files, lang) as MD;
 </style>
 <Block header="Skill">
   <div class="skill content">
-    {(<md.Content />)}
+    <md.Content />
   </div>
 </Block>

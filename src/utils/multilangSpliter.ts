@@ -8,7 +8,11 @@ export type MD = MarkdownInstance<Record<string, any>>;
 
 type LangMDs = Partial<Record<(typeof langs)[number], MD[]>>;
 
-export default function (allFiles: MD[], lang): MD | MD[] {
+const isHidedFileName = (filename: string) => filename.match(/\/_\w+.\w+.md/g);
+
+function spliter(allFiles: MD[], lang, isFiles?: false): MD;
+function spliter(allFiles: MD[], lang, isFiles?: true): MD[];
+function spliter(allFiles: MD[], lang, isFiles?: boolean): MD | MD[] {
   const mds: LangMDs = {};
 
   for (const key of langs) {
@@ -18,10 +22,14 @@ export default function (allFiles: MD[], lang): MD | MD[] {
     const files = mds[key];
     const filenameMatch = new RegExp(`\.${key}\.md$`);
     const langFiles = allFiles.filter((md) => {
-      return md.file.match(filenameMatch);
+      console.log(md.file, isHidedFileName(md.file));
+
+      return md.file.match(filenameMatch) && !isHidedFileName(md.file);
     });
     files.push(...langFiles);
   }
 
-  return mds[lang].length === 1 ? mds[lang][0] : mds[lang];
+  return isFiles ? mds[lang] : mds[lang][0];
 }
+
+export default spliter;
