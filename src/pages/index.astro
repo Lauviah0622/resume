@@ -1,17 +1,17 @@
 ---
 import Base from '../components/Base.astro';
 
-import Intro from '../blocks/Intro.astro';
 import Projects from '../blocks/Projects.astro';
 import Skill from '../blocks/Skill.astro';
 import Experience from '../blocks/Experience.astro';
 import Contact from '../blocks/Contact.astro';
+import Education from '../blocks/Education.astro';
 ---
 
 <Base>
-  <Intro />
-  <Skill />
-  <Experience />
-  <Projects />
-  <Contact />
+  <Skill slot="left" />
+  <Experience slot="left" />
+  <Projects slot="left" />
+  <Contact slot="right" />
+  <Education slot="right" />
 </Base>

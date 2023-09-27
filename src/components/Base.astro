@@ -2,6 +2,35 @@
 import '../style/global.css';
 ---
 
+<style>
+  .layout {
+    display: flex;
+    gap: 1em;
+    & .left {
+      flex: 70% 0 1;
+    }
+
+    & .right {
+      flex: auto 1 0;
+    }
+
+    @media print {
+      gap: 0.5em;
+    }
+
+    @media (max-width: 720px) {
+      display: flex;
+      flex-direction: column;
+      & .left {
+        flex: 70% 0 1;
+      }
+
+      & .right {
+        flex: auto 1 0;
+      }
+    }
+  }
+</style>
 <html lang="en">
   <head>
     <title>Lance Resume</title>
@@ -11,17 +40,18 @@ import '../style/global.css';
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-    </style>
   </head>
   <body>
     <main>
-      <slot />
+      <h1>Lance Fang</h1>
+      <div class="layout">
+        <div class="left">
+          <slot name="left" />
+        </div>
+        <div class="right">
+          <slot name="right" />
+        </div>
+      </div>
     </main>
   </body>
 </html>

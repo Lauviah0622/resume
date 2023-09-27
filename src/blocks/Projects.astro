@@ -11,18 +11,22 @@ const files = await Astro.glob('../content/projects/*.md');
 const mds = multilangSpliter(files, lang, true);
 ---
 
-<Block header="Projects">
-  {
-    mds.sort().map(({ frontmatter, Content }) => {
-      return (
-        <Project
-          cover={frontmatter.cover}
-          title={frontmatter.title}
-          link={frontmatter.link}
-        >
-          <Content />
-        </Project>
-      );
-    })
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
   }
+</style>
+<Block header="Projects">
+  <div class="content">
+    {
+      mds.sort().map(({ frontmatter, Content }) => {
+        return (
+          <Project title={frontmatter.title} link={frontmatter.link}>
+            <Content />
+          </Project>
+        );
+      })
+    }
+  </div>
 </Block>

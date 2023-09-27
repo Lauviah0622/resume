@@ -1,54 +1,69 @@
 ---
 import Block from '../components/Block.astro';
-import multilangSpliter, {
-  type MD,
-  type LangProps,
-} from '../utils/multilangSpliter.js';
+import ContactItem from '../components/ContactItem.astro';
+import EmailIcon from '../icons/email.astro';
+import GithubIcon from '../icons/github.astro';
+import GlobeIcon from '../icons/globe.astro';
+import PersonIcon from '../icons/person.astro';
+import PhoneIcon from '../icons/phone.astro';
+import multilangSpliter, { type LangProps } from '../utils/multilangSpliter.js';
 
 export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
 const files = await Astro.glob('../content/contact/*.md');
-const md = multilangSpliter(files, lang);
+// const md = multilangSpliter(files, lang);
 
-const Markdown = md.Content;
+// const Markdown = md.Content;
 ---
 
 <style>
   .contact {
     display: flex;
+    flex-direction: column;
+    gap: 0.5em;
     & h3 {
       flex: 8em 1 0;
     }
 
     & > p {
-      color: blue;
       flex: auto 0.5 0;
       margin-top: 0;
       line-height: 13px;
       white-space: break-spaces;
       padding: 0 1em;
     }
-  }
 
-  @media print {
-    .contact {
-      & h3 {
-        display: none;
-        flex: none;
-      }
-
-      & > p {
-        flex: none !important;
-        margin-top: 1em !important;
-        line-height: 1em !important;
-        padding: 0;
-      }
+    @media print {
+      flex-wrap: wrap;
+      height: 2cm;
+      width: 10cm;
     }
   }
 </style>
 <Block header="Contact">
-  <div class="contact">
-    <Markdown />
+  <div class="contact content">
+    <ContactItem>
+      <PersonIcon slot="icon" />
+       方承宥
+    </ContactItem>
+    <ContactItem>
+      <EmailIcon slot="icon" />
+      <a target="_blank" href="mailto:lauviah0622@gmail.com"
+        >lauviah0622@gmail.com (prefered)</a
+      >
+    </ContactItem>
+    <ContactItem>
+      <PhoneIcon slot="icon" />
+       0960775000
+    </ContactItem>
+    <ContactItem>
+      <GithubIcon slot="icon" />
+      <a target="_blank" href="https://github.com/Lauviah0622">lauviah0622</a>
+    </ContactItem>
+    <ContactItem>
+      <GlobeIcon slot="icon" />
+      <a target="_blank" href="https://lavif.me">lavif.me</a>
+    </ContactItem>
   </div>
 </Block>

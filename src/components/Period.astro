@@ -19,9 +19,6 @@ const { to, from, company, title, type } = Astro.props;
 
 <style>
   .container {
-    display: flex;
-    margin-block-end: 2em;
-
     & .content *:nth-child(1) {
       margin-top: 0;
     }
@@ -32,33 +29,9 @@ const { to, from, company, title, type } = Astro.props;
   }
 
   .cover {
-    width: 15em;
-    padding-right: 2em;
-    box-sizing: border-box;
-    flex: auto 0 0;
-
-    & p {
-      margin-block: 0 0;
-    }
-
-    & h3 {
-      margin-block-end: 0.2em;
-    }
-
-    & h6 {
-      margin-block-start: 0em;
-      color: var(--color-text-secondary);
-      font-weight: 300;
-    }
-
-    & img {
-      height: auto;
-      width: 100%;
-    }
-
-    &.noTitle {
-      width: auto;
-    }
+    display: flex;
+    align-items: baseline;
+    gap: 2ch;
 
     @media print {
       width: auto;
@@ -66,12 +39,11 @@ const { to, from, company, title, type } = Astro.props;
   }
 </style>
 <div class="container">
-  <div class={`cover ${type === 'school' && 'noTitle'}`}>
-    <h3>{title}</h3>
-    <p>{company}</p>
-    <h6>{formatDate(from)} - {formatDate(to)}</h6>
+  <div class={'cover'}>
+    <h3>{company}</h3>
+    <h4>{formatDate(from)} - {formatDate(to)}</h4>
   </div>
-  <div class="content">
+  <div>
     <slot />
   </div>
 </div>

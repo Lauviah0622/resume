@@ -1,0 +1,16 @@
+---
+import Block from '../components/Block.astro';
+---
+
+<style>
+  :global(.education) {
+    @media print {
+      display: none;
+    }
+  }
+</style>
+<Block header="education" className="education">
+  <h3>資訊傳播學系</h3>
+  <p>淡江大學</p>
+  <h4>2016.09 - 2020.06</h4>
+</Block>
