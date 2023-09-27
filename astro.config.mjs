@@ -1,3 +1,5 @@
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -8,20 +10,26 @@
 
 // @ts-check
 
-export default /** @type {import('astro').AstroUserConfig} */ ({
-	// Enable the React renderer to support React JSX components.
-	renderers: ['@astrojs/renderer-react'],
-	markdownOptions: {
-		render: [
-			'@astrojs/markdown-remark',
-			{
-				rehypePlugins: [
-					'remark-gfm',
-					'remark-smartypants',
-					['rehype-external-links',
-					{target:"_blank"}]
-				]
-			}
-		]
-	}
-});
+// https://astro.build/config
+export default defineConfig(
+  /** @type {import('astro').AstroUserConfig} */ {
+    markdownOptions: {
+      render: [
+        '@astrojs/markdown-remark',
+        {
+          rehypePlugins: [
+            'remark-gfm',
+            'remark-smartypants',
+            [
+              'rehype-external-links',
+              {
+                target: '_blank',
+              },
+            ],
+          ],
+        },
+      ],
+    },
+    integrations: [react()],
+  }
+);

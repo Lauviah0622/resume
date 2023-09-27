@@ -1,82 +1,77 @@
 ---
-import { Markdown } from 'astro/components';
 import dayjs from 'dayjs';
 
-
 export interface Props {
-    to: string
-    from: string
-    company: string
-    title:string
-    desc:string
-    type: string
+  to: string;
+  from: string;
+  company: string;
+  title: string;
+  type: string;
 }
 
-const formatDate =(date) => {
-    if (date === 'current') return date
-    return dayjs(date).format('MMM YYYY')
-}
+const formatDate = (date) => {
+  if (date === 'current') return date;
+  return dayjs(date).format('MMM YYYY');
+};
 
-const {to, from, company, title, desc, type} = Astro.props;
+const { to, from, company, title, type } = Astro.props;
 ---
+
 <style>
-    .container {
-        display: flex;
-        margin-block-end: 2em;
+  .container {
+    display: flex;
+    margin-block-end: 2em;
 
-        & .content *:nth-child(1) {
-            margin-top: 0;
-        }
-
-        @media (max-width: 720px) { 
-            flex-direction: column;
-        }
+    & .content *:nth-child(1) {
+      margin-top: 0;
     }
 
-    .cover {
-        width: 15em;
-        padding-right: 2em;
-        box-sizing: border-box;
-        flex: auto 0 0;
-
-        & p {
-            margin-block: 0 0;
-        }
-
-        & h3 {
-            margin-block-end: .2em;
-        }
-
-        & h6 {
-            margin-block-start: .0em;
-            color: var(--color-text-secondary);
-            font-weight: 300;
-
-        }
-
-        & img {
-            height: auto;
-            width: 100%;
-        }
-
-        &.noTitle {
-            width: auto
-        }
-
-        @media print {
-            width: auto;
-        }
+    @media (max-width: 720px) {
+      flex-direction: column;
     }
+  }
+
+  .cover {
+    width: 15em;
+    padding-right: 2em;
+    box-sizing: border-box;
+    flex: auto 0 0;
+
+    & p {
+      margin-block: 0 0;
+    }
+
+    & h3 {
+      margin-block-end: 0.2em;
+    }
+
+    & h6 {
+      margin-block-start: 0em;
+      color: var(--color-text-secondary);
+      font-weight: 300;
+    }
+
+    & img {
+      height: auto;
+      width: 100%;
+    }
+
+    &.noTitle {
+      width: auto;
+    }
+
+    @media print {
+      width: auto;
+    }
+  }
 </style>
 <div class="container">
-    <div class={`cover ${type === 'school' && 'noTitle'}`}>
-        <h3>{title}</h3>
-            <p>{company}</p>
-            <h6>{formatDate(from)} - {formatDate(to)}</h6>
-    </div>
-    {type !== 'school' && 
-        <div class="content">
-            <Markdown content={desc}/>
-        </div>
-    }
+  <div class={`cover ${type === 'school' && 'noTitle'}`}>
+    <h3>{title}</h3>
+    <p>{company}</p>
+    <h6>{formatDate(from)} - {formatDate(to)}</h6>
+  </div>
+  <div class="content">
+    <slot />
+  </div>
 </div>

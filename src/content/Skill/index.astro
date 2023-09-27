@@ -1,35 +1,41 @@
 ---
-import { Markdown } from 'astro/components'
-import Block from '../../components/Block/Block.astro'
+import Block from '../../components/Block/Block.astro';
 
-const data = Astro.fetchContent('./skill.tw.md');
-const skill = data[0]
+import multilangSpliter, {
+  type MD,
+  type LangProps,
+} from '../../utils/multilangSpliter.js';
+
+export interface Props extends LangProps {}
+const { lang = 'tw' } = Astro.props;
+
+const files = await Astro.glob('./*.md');
+const md = (await multilangSpliter(files, lang)) as MD;
 ---
-<style>
-    .skill {
-        column-count: 2;
-        column-rule: solid var(--color-secondary);
-        column-gap: 3em;
-        & :global(h3) {
-            margin-block-end: .5em;
-        }
-            
 
-        @media (max-width: 720px) { 
-            column-count: 1;
-            & :global(h4) {
-                margin-block-end: .5em;
-            }
-            
-            & :global(br) {
-                display: none;
-            }
-        }
+<style>
+  .skill {
+    column-count: 2;
+    column-rule: solid var(--color-secondary);
+    column-gap: 3em;
+    & :global(h3) {
+      margin-block-end: 0.5em;
     }
 
+    @media (max-width: 720px) {
+      column-count: 1;
+      & :global(h4) {
+        margin-block-end: 0.5em;
+      }
+
+      & :global(br) {
+        display: none;
+      }
+    }
+  }
 </style>
 <Block header="Skill">
-    <div class="skill content">
-        <Markdown content={skill.astro.source}/>
-    </div>
+  <div class="skill content">
+    {(<md.Content />)}
+  </div>
 </Block>

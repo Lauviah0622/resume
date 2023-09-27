@@ -1,74 +1,59 @@
 ---
-import { Markdown } from 'astro/components'
+import multilangSpliter, {
+  type MD,
+  type LangProps,
+} from '../../utils/multilangSpliter.js';
 
-import multilangSpliter from '../../utils/multilangSpliter.js'
-
-export interface Props{
-    lang: 'en' | 'tw'
-}
-
-const contact = Astro.fetchContent('./*.md');
-
-const md = multilangSpliter(contact)
+export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
+const files = await Astro.glob('./*.md');
+const md = await multilangSpliter(files, lang) as MD;
 
-// const data = Astro.fetchContent('./intro.tw.md')
-// const intro = data[0]
-
-
-
+const Markdown = md.Content;
 ---
 
-
-<style lang="scss">
-    .intro {
-        display: flex;
-        & :global(h2)  {
-            color: var(--color-secondary);
-            font-size: 2em;
-            font-weight: 400;
-
-        }
-
-        @media (max-width: 720px) { 
-            flex-direction: column;
-            
-        }
-
-        @media print {
-            display: block;
-        }
+<style>
+  .intro {
+    display: flex;
+    & :global(h2) {
+      color: var(--color-secondary);
+      font-size: 2em;
+      font-weight: 400;
     }
 
-    .avatar {
-        height: 20em;
-        flex-shrink: 0;
-        @media (max-width: 720px) { 
-            width: 70%;
-            margin: 15% auto;
-        }
+    @media (max-width: 720px) {
+      flex-direction: column;
     }
 
-    .content {
-        padding-right: 0px;
-        line-height: 1.8em;
-        /* padding-left: 3em; */
-        @media (max-width: 720px) { 
-            h2 {
-                text-align: center;
-            }
-            padding-left: 0;
-            padding: 0 1em;
-        }
+    @media print {
+      display: block;
     }
+  }
 
-    
+  .avatar {
+    height: 20em;
+    flex-shrink: 0;
+    @media (max-width: 720px) {
+      width: 70%;
+      margin: 15% auto;
+    }
+  }
+
+  .content {
+    padding-right: 0px;
+    line-height: 1.8em;
+    @media (max-width: 720px) {
+      h2 {
+        text-align: center;
+      }
+      padding-left: 0;
+      padding: 0 1em;
+    }
+  }
 </style>
 <section class="intro">
-    <div class="content">
-        <Markdown slot="content">
-            {md[lang][0].astro.source}
-        </Markdown>
-    </div>
+  <div class="content">
+    <Markdown />
+  </div>
 </section>

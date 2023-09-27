@@ -9,10 +9,22 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.20",
+    "astro": "^3.1.2",
     "autoprefixer": "^10.4.2",
     "dayjs": "^1.10.7",
     "postcss-nesting": "^10.1.2",
     "rehype-external-links": "^1.0.1"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^3.2.0",
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/renderer-react": "^0.5.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remark-gfm": "^3.0.1",
+    "remark-smartypants": "^2.0.0",
+    "reveal.js": "^4.6.1"
   }
 }

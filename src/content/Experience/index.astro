@@ -1,33 +1,36 @@
 ---
-import Period from './Period.astro'
-import Header from '../../components/Header/Header.astro'
-import multilangSpliter from '../../utils/multilangSpliter.js'
+import Period from './Period.astro';
+import Header from '../../components/Header/Header.astro';
+import multilangSpliter, {
+  type MD,
+  type LangProps,
+} from '../../utils/multilangSpliter.js';
 
-export interface Props{
-    lang: 'en' | 'tw'
-}
-
-const contact = Astro.fetchContent('./src/*.md');
-
-const md = multilangSpliter(contact)
-
+export interface Props extends LangProps {}
 const { lang = 'tw' } = Astro.props;
+
+const files = await Astro.glob('./src/*.md');
+const mds = (await multilangSpliter(files, lang)) as MD[];
+
 ---
 
 <section>
-    <Header>
-        Experiece
-    </Header>
-    <div class="content">
-        {md[lang].sort().map(period => (
-            <Period 
-                to={period.to}
-                from={period.from}
-                title={period.title}
-                desc={period.astro.source}
-                company={period.company}
-                type={period.type}
-                />
-        ))}    
-    </div>
+  <Header>Experiece</Header>
+  <div class="content">
+    {
+      mds.sort().map(({ frontmatter, Content }) => {
+        return (
+          <Period
+            to={frontmatter.to}
+            from={frontmatter.from}
+            title={frontmatter.title}
+            company={frontmatter.company}
+            type={frontmatter.type}
+          >
+            <Content />
+          </Period>
+        );
+      })
+    }
+  </div>
 </section>

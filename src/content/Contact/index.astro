@@ -1,55 +1,54 @@
 ---
-import { Markdown } from 'astro/components';
-import Block from '../../components/Block/Block.astro'
-import multilangSpliter from '../../utils/multilangSpliter.js'
+import Block from '../../components/Block/Block.astro';
+import multilangSpliter, {
+  type MD,
+  type LangProps,
+} from '../../utils/multilangSpliter.js';
 
-export interface Props{
-    lang: 'en' | 'tw'
-}
-
-const contact = Astro.fetchContent('./*.md');
-
-const md = multilangSpliter(contact)
+export interface Props extends LangProps {}
 
 const { lang = 'tw' } = Astro.props;
+const files = await Astro.glob('./*.md');
+const md = (await multilangSpliter(files, lang)) as MD;
+
+const Markdown = md.Content;
 ---
 
 <style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    & h3 {
+      flex: 8em 1 0;
+    }
+
+    & > p {
+      flex: auto 0.5 0;
+      margin-top: 0;
+      line-height: 26px;
+      white-space: break-spaces;
+      padding: 0 1em;
+    }
+  }
+
+  @media print {
     .contact {
-        display: flex;
-        & h3 {
-            flex: 8em 1 0;
-        }
+      & h3 {
+        display: none;
+        flex: none;
+      }
 
-        & > p {
-            flex: auto .5 0;
-            margin-top: 0;
-            line-height: 26px;
-            white-space: break-spaces;
-            padding: 0 1em
-        }
-
+      & > p {
+        flex: none !important;
+        margin-top: 1em !important;
+        line-height: 1em !important;
+        padding: 0;
+      }
     }
-
-    @media print {   
-        .contact {
-            flex-direction: column;
-            & h3 {
-                display: none;
-                flex: none;
-            }
-
-            & > p {
-                flex: none !important;
-                margin-top: 1em !important;
-                line-height: 1em !important; 
-                padding: 0
-            }
-        }
-    }
+  }
 </style>
 <Block header="Contact">
-    <div class="contact">
-        <Markdown content={md[lang][0].astro.source} />
-    </div>
+  <div class="contact">
+    <Markdown />
+  </div>
 </Block>
