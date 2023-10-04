@@ -1,7 +1,7 @@
 ---
 title: 前端工程師
 company: 'Gemini 捷敏數據'
-from: '2021-07-01'
+from: '2022-07-01'
 to: 'current'
 ---
 
