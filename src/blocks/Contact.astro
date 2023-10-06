@@ -7,13 +7,8 @@ import GlobeIcon from '../components/icons/globe.astro';
 import PersonIcon from '../components/icons/person.astro';
 import PhoneIcon from '../components/icons/phone.astro';
 
-export interface Props extends LangProps {}
+export interface Props extends BlockProps {}
 
-const { lang = 'tw' } = Astro.props;
-const files = await Astro.glob('../content/contact/*.md');
-// const md = multilangSpliter(files, lang);
-
-// const Markdown = md.Content;
 ---
 
 <style>
