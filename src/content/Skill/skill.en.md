@@ -1,24 +1,21 @@
-### FrontEnd
+### Programming Language
 
-- HTML5, CSS3, ESnext
-- React(class & hooks), Redux, React-query
-- CSS in JS ：styled-components, emotion
-- Material UI, Ant design
-- Webpack, Vite, Babel, Postcss, Pnpm
-- TypeScript
+- Familiar with development using ESNext, CSS, HTML syntax. Working experience with TS development.
 
-<br>
-<br>
-<br>
-<br>
+### Frontend
 
-### BackEnd
+- Familiar with React ecosystem, including state management (Redux, Zustand, Jotai, React-query), module bundler (Webpack, Vite), UI solution (CSS in JS, UI lib)
+- Able to build static site with Astro even connect to CMS for content generation
 
-- Node.js, Express.js, Sequelize, MySQL, AWS EC2
+### Backend
+
+- Build backend Restful / GraphQL API service with Express, Koa and SQL / NoSQL DB.
 
 ### UI/UX
-- UX/UI Design Procedure
-- Adobe XD, Figma
+
+- Using Figma for web design and prototype, also utilize with other graphics software
 
 ### Other
-- Scheme
+
+- Familiar with git cli and gir related gadget, and also collaboration platform like GitHub or GitLab
+- Collaborate with ChatGPT in needed :)

@@ -4,5 +4,6 @@ cover: /blog.png
 link: https://lavif.me/
 ---
 
-- 基於 Astro 結合 React 獨自開發、設計的個人部落格
-- 利用 Markdown 寫作文章樣版產生靜態網頁
+- Design and develope personal blog on my own
+- Use Astro combine with React, and Markdown for writing content, to meet both DX and performance
+- Light house Performance is fine, but lack fo SEO ：(

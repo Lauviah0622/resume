@@ -1,7 +1,6 @@
 ### Programming Language
 
-- 熟悉運用大部分 JavaScript ESNext, CSS, HTML 語法進行開發
-  了解 TypeScript 並在開發中運用
+- 熟悉運用 ESNext, CSS, HTML 語法進行開發。並有使用 TS 開發的工作經驗
 
 ### Frontend
 
@@ -10,7 +9,7 @@
 
 ### Backend
 
-- 使用 Express, Koa 搭配 SQL / NoSQL 資料庫搭建 Restful / GraphQL API 並將專案部署至雲端
+- 使用 Express, Koa 搭配 SQL / NoSQL 資料庫搭建 Restful / GraphQL API 並部署專案
 
 ### UI/UX
 
