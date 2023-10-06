@@ -1,6 +1,6 @@
 ---
 title: Front-end Developer
-company: 'Gemini 捷敏數據'
+company: 'Gemini Data'
 from: '2022-07-01'
 to: 'current'
 ---
