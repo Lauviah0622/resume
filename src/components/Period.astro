@@ -1,16 +1,11 @@
 ---
-import dayjs from 'dayjs';
+import { formatDate } from '../utils/date';
 
 export interface Props {
   to: string;
   from: string;
   company: string;
 }
-
-const formatDate = (date) => {
-  if (date === 'current') return date;
-  return dayjs(date).format('MMM YYYY');
-};
 
 const { to, from, company } = Astro.props;
 ---
