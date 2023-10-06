@@ -23,10 +23,13 @@
     15.5px 25.6px 33.7px -2.1px hsl(var(--shadow-color) / 0.34),
     22.9px 37.8px 49.7px -2.5px hsl(var(--shadow-color) / 0.34);
   /* https://www.joshwcomeau.com/shadow-palette/ */
+
+
+  /* TODO use global variable as gap size  */
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 
   background: var(--color-bg-secondary);
@@ -43,7 +46,6 @@ html {
 
 body {
   display: flex;
-  /* background: var(--color-bg-secondary); */
 }
 
 html,
@@ -89,7 +91,7 @@ div {
 }
 
 section {
-  margin-block-end: 3em;
+  margin-block-end: 2em;
   page-break-inside: avoid;
 
   @media print {
