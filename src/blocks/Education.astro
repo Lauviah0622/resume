@@ -1,5 +1,27 @@
 ---
 import Block from '../components/Block.astro';
+import { formatDate } from '../utils/date';
+
+export interface Props extends BlockProps {}
+
+const { lang = 'tw' } = Astro.props;
+
+const locales = {
+  en: {
+    department: 'Department of Infomation and Coomunication',
+    university: 'Tamkang University',
+    from: '2016.09.01',
+    to: '2020.06.01',
+  },
+  tw: {
+    department: '資訊傳播學系',
+    university: '淡江大學',
+    from: '2016.09.01',
+    to: '2020.06.01',
+  },
+} as const;
+
+const i18n = locales[lang];
 ---
 
 <style>
@@ -10,7 +32,9 @@ import Block from '../components/Block.astro';
   }
 </style>
 <Block header="education" className="education">
-  <h3>資訊傳播學系</h3>
-  <p>淡江大學</p>
-  <h4>2016.09 - 2020.06</h4>
+  <div class="content">
+    <h3>{i18n.department}</h3>
+    <p>{i18n.university}</p>
+    <h4>{formatDate(i18n.from)} - {formatDate(i18n.to)}</h4>
+  </div>
 </Block>
