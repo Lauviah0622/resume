@@ -7,11 +7,11 @@ import '../style/global.css';
     display: flex;
     gap: 1em;
     & .left {
-      flex: 70% 0 1;
+      flex: 0 0 60%;
     }
 
     & .right {
-      flex: auto 1 0;
+      flex: 0 1 auto;
     }
 
     @media print {
@@ -22,11 +22,11 @@ import '../style/global.css';
       display: flex;
       flex-direction: column;
       & .left {
-        flex: 70% 0 1;
+        flex: 0 1 70% ;
       }
 
       & .right {
-        flex: auto 1 0;
+        flex: 0 0 auto ;
       }
     }
   }
