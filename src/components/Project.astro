@@ -2,10 +2,10 @@
 export interface Props {
   title: string;
   link: string;
-  repoLink?: string;
+  repo?: string;
 }
 
-const { title, link } = Astro.props;
+const { title, link, repo } = Astro.props;
 ---
 
 <style>
@@ -33,7 +33,7 @@ const { title, link } = Astro.props;
         <h3>{title}</h3>
       )
     }
-    <a target="_blank" href={link}>repo</a>
+    {repo && <a target="_blank" href={repo}>repo</a>}
   </div>
   <slot />
 </div>

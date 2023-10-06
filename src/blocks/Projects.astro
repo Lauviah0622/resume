@@ -22,7 +22,11 @@ const mds = multilangSpliter(files, lang, true);
     {
       mds.map(({ frontmatter, Content }) => {
         return (
-          <Project title={frontmatter.title} link={frontmatter.link}>
+          <Project
+            title={frontmatter.title}
+            link={frontmatter.link}
+            repo={frontmatter.repo}
+          >
             <Content />
           </Project>
         );
