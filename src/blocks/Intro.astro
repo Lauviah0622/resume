@@ -1,10 +1,7 @@
 ---
-import multilangSpliter, {
-  type MD,
-  type LangProps,
-} from '../utils/multilangSpliter.js';
+import multilangSpliter from '../utils/multilangSpliter.js';
 
-export interface Props extends LangProps {}
+export interface Props extends BlockProps {}
 
 const { lang = 'tw' } = Astro.props;
 const files = await Astro.glob('../content/intro/*.md');

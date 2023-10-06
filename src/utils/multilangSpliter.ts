@@ -3,7 +3,6 @@ import type { MarkdownInstance } from 'astro';
 const langs = ['tw', 'en'] as const;
 
 export type Lang = (typeof langs)[number];
-export type LangProps = { lang?: Lang };
 export type MD = MarkdownInstance<Record<string, any>>;
 
 type LangMDs = Partial<Record<(typeof langs)[number], MD[]>>;

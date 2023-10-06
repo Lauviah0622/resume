@@ -1,9 +1,9 @@
 ---
 import Project from '../components/Project.astro';
 import Block from '../components/Block.astro';
-import multilangSpliter, { type LangProps } from '../utils/multilangSpliter.js';
+import multilangSpliter from '../utils/multilangSpliter.js';
 
-export interface Props extends LangProps {}
+export interface Props extends BlockProps {}
 
 const { lang = 'tw' } = Astro.props;
 
