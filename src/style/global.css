@@ -51,7 +51,11 @@ html,
 body {
   font-family: system-ui;
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
+
+  @media (max-width: 720px) {
+    padding: 0;
+  }
 }
 
 main {
