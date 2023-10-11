@@ -1,0 +1,56 @@
+---
+import PrintIcon from '../components/icons/print.astro';
+import EnIcon from '../components/icons/en.astro';
+import TwIcon from '../components/icons/tw.astro';
+---
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: calc(50% - 550px);
+    top: 40%;
+    color: white;
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+    padding: 0.5em;
+    background: var(--color-secondary);
+    gap: 0.7em;
+
+    & > div {
+      height: 1.5em;
+      width: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0 0 3px #ffffff99);
+      }
+    }
+
+    & hr {
+      margin: 0.3em 0;
+      background-color: var(--color-bg-secondary);
+    }
+  }
+</style>
+<script>
+  document.querySelector('#print').addEventListener('click', () => {
+    print();
+  });
+
+  document.querySelector('#locale').addEventListener('click', () => {
+    const isEn = window.location.pathname.match('en');
+    window.location.href = isEn ? '/' : '/en';
+  });
+</script>
+<div class="container">
+  <div id="print">
+    <PrintIcon />
+  </div>
+  <div id="locale">
+    {Astro.url.pathname.match('en') ? <TwIcon /> : <EnIcon />}
+  </div>
+</div>

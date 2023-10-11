@@ -1,5 +1,6 @@
 ---
 import '../style/global.css';
+import Floating from './Floating.astro';
 ---
 
 <style>
@@ -22,11 +23,11 @@ import '../style/global.css';
       display: flex;
       flex-direction: column;
       & .left {
-        flex: 0 1 70% ;
+        flex: 0 1 70%;
       }
 
       & .right {
-        flex: 0 0 auto ;
+        flex: 0 0 auto;
       }
     }
   }
@@ -53,5 +54,6 @@ import '../style/global.css';
         </div>
       </div>
     </main>
+    <Floating />
   </body>
 </html>
