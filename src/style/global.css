@@ -15,7 +15,7 @@
     4.6px 7.6px 10px -2.5px hsl(var(--shadow-color) / 0.36);
 
   --shadow-elevation-high: 0.2px 0.4px 0.5px hsl(var(--shadow-color) / 0.34),
-    1.3px 2.2px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
+     1.3px 2.2px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
     2.5px 4.1px 5.4px -0.7px hsl(var(--shadow-color) / 0.34),
     4.1px 6.8px 8.9px -1.1px hsl(var(--shadow-color) / 0.34),
     6.5px 10.8px 14.2px -1.4px hsl(var(--shadow-color) / 0.34),
