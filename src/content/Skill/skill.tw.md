@@ -1,21 +1,23 @@
 ### Programming Language
 
-- 熟悉運用 ESNext, CSS, HTML 語法進行開發。並有使用 TS 開發的工作經驗
+- 熟悉 ESnext, CSS, HTML 觀念、原理、生態，並於不同裝置、瀏覽器上進行開發
+- 建立 Typescript 專案設定，並進行開發
 
 ### Frontend
 
-- 熟悉使用 React 及相關生態，包含狀態管理(Redux, Zustand, Jotai, React-query), 打包工具 (Webpack, Vite), UI 方案 (CSS in JS, UI lib) 等
-- 熟悉使用 Astro 進行 Static site 的開發，並使用相關工具搭建 CMS 管理系統
+- 使用 React 近四年的經驗，包含狀態管理(Redux, React-query 等), 打包工具 (Webpack, Vite), UI 方案 (CSS in JS, UI lib) 等套件生態，並有能力獨立建構工程化之 SPA 應用技術棧，包含打包、自動化測試、mono-repo及組件庫管理。
+- 熟悉使用 Astro 進行靜態網站的開發，並搭建 CMS 管理系統
 
 ### Backend
 
-- 使用 Express, Koa 搭配 SQL / NoSQL 資料庫搭建 Restful / GraphQL API 並部署專案
+- 有能力建立架設簡易的 node.js 後端(Express, Koa.js)，規劃、部署、及串接資料庫(ORM)，並部署至雲端(AWS, GCP)與前端進行串接
 
 ### UI/UX
 
-- 使用 Figma 製作網頁設計及 Prototype, 必要時搭配使用相關繪圖軟體
+- 有能力獨立使用 Figma 設計網頁並建立 Prototype 進行演示，以及圖像軟體 (AI, PS) 製作相關素材
 
 ### Other
 
-- 熟悉 Git cli 及相關工具, 並使用平台 (Github, Gitlab) 進行 Git flow 協作
-- 在需要時使用 ChatGPT 增加開發效率：）
+- 熟悉 Git cli 及相關工具, 並使用平台 (Github, Gitlab) 與開發團隊或在開源專案上進行協作
+- 建立簡易的 CI/CD 流程 (Github Action)
+- 使用 ChatGPT 增加開發效率，例如初步建立 Regex, 轉換資料格式等
