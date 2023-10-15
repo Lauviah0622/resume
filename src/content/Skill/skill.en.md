@@ -1,21 +1,23 @@
 ### Programming Language
 
-- Familiar with development using ESNext, CSS, HTML syntax. Working experience with TS development.
+- Proficient in ESnext, CSS, and HTML concepts, principles, and ecosystems, with the ability to execute on various devices and browsers.
+- Proficient in creating TypeScript project configurations and developing.
 
 ### Frontend
 
-- Familiar with React ecosystem, including state management (Redux, Zustand, Jotai, React-query), module bundler (Webpack, Vite), UI solution (CSS in JS, UI lib)
-- Able to build static site with Astro even connect to CMS for content generation
+- Four years of experience in utilizing React. Familiar with state management (Redux, React-query etc.), UI solutions (CSS-in-JS, UI libs).
+- Able to construct engineered SPA application technology stack, including packaging, automated testing, mono-repo, and component library management.
+- Build static site with Astro and connect to CMS for content generation
 
 ### Backend
 
-- Build backend Restful / GraphQL API service with Express, Koa and SQL / NoSQL DB.
+- Build Node.js backend Application, construct and connect to Database and deploy to cloud server.
 
 ### UI/UX
 
-- Using Figma for web design and prototype, also utilize with other graphics software
+- Design and prototyping the UI with Figma. And crafted materials using graphic software (AI, PS).
 
 ### Other
-
-- Familiar with git cli and gir related gadget, and also collaboration platform like GitHub or GitLab
-- Collaborate with ChatGPT in needed :)
+- Proficient in Git CLI and associated tools, collaborating with development teams or open-source projects on platforms like Github and Gitlab. 
+- Establishing streamlined CI/CD processes using Github Actions.
+- Collaborate with ChatGPT in needed like create Regex syntax and transform data format
