@@ -17,6 +17,11 @@ const { title, link, repo } = Astro.props;
     & > a {
       font-size: 0.8em;
     }
+
+    @media print {
+      /* gap: 0.2em; */
+      /* flex-direction: column; */
+    }
   }
 </style>
 
@@ -33,7 +38,13 @@ const { title, link, repo } = Astro.props;
         <h3>{title}</h3>
       )
     }
-    {repo && <a target="_blank" href={repo}>repo</a>}
+    {
+      repo && (
+        <a target="_blank" href={repo}>
+          repo
+        </a>
+      )
+    }
   </div>
   <slot />
 </div>

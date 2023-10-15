@@ -1,6 +1,9 @@
 ---
 import '../style/global.css';
 import Floating from './Floating.astro';
+
+export interface Props extends BlockProps {}
+const { lang = 'tw' } = Astro.props;
 ---
 
 <style>
@@ -32,7 +35,7 @@ import Floating from './Floating.astro';
     }
   }
 </style>
-<html lang="en">
+<html>
   <head>
     <title>Lance Resume</title>
     <meta charset="utf-8" />
@@ -45,6 +48,9 @@ import Floating from './Floating.astro';
   <body>
     <main>
       <h1>Lance Fang</h1>
+      <div>
+        <slot />
+      </div>
       <div class="layout">
         <div class="left">
           <slot name="left" />

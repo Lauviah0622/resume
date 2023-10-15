@@ -15,7 +15,7 @@
     4.6px 7.6px 10px -2.5px hsl(var(--shadow-color) / 0.36);
 
   --shadow-elevation-high: 0.2px 0.4px 0.5px hsl(var(--shadow-color) / 0.34),
-     1.3px 2.2px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
+    1.3px 2.2px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
     2.5px 4.1px 5.4px -0.7px hsl(var(--shadow-color) / 0.34),
     4.1px 6.8px 8.9px -1.1px hsl(var(--shadow-color) / 0.34),
     6.5px 10.8px 14.2px -1.4px hsl(var(--shadow-color) / 0.34),
@@ -25,6 +25,15 @@
   /* https://www.joshwcomeau.com/shadow-palette/ */
 
   /* TODO use global variable as gap size  */
+}
+
+@page {
+  margin: 5mm;
+  size: A4 potrait;
+}
+
+@page:left, @page:right {
+  margin-left: 7cm;
 }
 
 html {
@@ -39,7 +48,7 @@ html {
 
   @media print {
     font-size: 10pt;
-    line-height: 12pt;
+    line-height: 1.1em;
   }
 }
 
@@ -69,8 +78,10 @@ main {
   @media print {
     width: 100%;
     box-shadow: none;
-    font-size: 10pt;
     padding: 1.5cm;
+    line-break: loose;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 
   @media (max-width: 720px) {
@@ -98,7 +109,7 @@ section {
 
   @media print {
     padding-bottom: 0cm;
-    margin-block-end: 0cm;
+    margin-block-end: 2.5em;
   }
 
   @media (max-width: 720px) {
@@ -111,6 +122,10 @@ img {
   object-fit: cover;
   height: 100%;
   width: 100%;
+
+  @media print {
+    display: none !important;
+  }
 }
 
 h2,
@@ -122,6 +137,10 @@ p,
 ul {
   margin-block-start: 0;
   margin-block-end: 0.5em;
+
+  @media print {
+    margin-block-end: 0.2em;
+  }
 }
 
 h1 {
@@ -163,12 +182,18 @@ h4 {
   color: var(--color-dark);
 }
 
+p,
+ul,
+ol {
+  line-height: 1.5em;
+}
+
+p + p {
+  margin-block-start: 0.3em;
+}
+
 ul {
   padding-left: 1em;
-
-  & li {
-    line-height: 1.5em;
-  }
 
   @media (max-width: 720px) {
     padding-left: 2em;
@@ -178,7 +203,7 @@ ul {
   }
 
   @media print {
-    margin-block-end: 0.2cm;
+    margin-block-end: 0.2em;
   }
 }
 
@@ -194,47 +219,15 @@ a {
     display: inline-block;
     transform: translateY(-0.5em);
   }
-}
 
-@media print {
-  a {
-    display: block;
+  @media print {
+    display: inline-block;
     text-decoration: none;
-
+    margin-right: 0px;
     &::after {
       content: ' [' attr(href) ']';
       position: static;
       display: inline;
     }
   }
-
-  img {
-    display: none !important;
-    /* width: auto !important; 
-    height: 100pt !important;
-    margin: auto;
-    break-inside:avoid;
-    break-after:avoid; */
-  }
-}
-
-p,
-img {
-  break-inside: avoid;
-  break-before: aleays;
-  break-after: aleays;
-}
-
-ul,
-ol {
-  break-before: avoid;
-}
-
-@page {
-  margin: 5mm;
-  size: A4 potrait;
-}
-
-@page:left, @page:right {
-  margin-left: 7cm;
 }
