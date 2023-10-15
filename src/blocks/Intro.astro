@@ -13,11 +13,6 @@ const Markdown = md.Content;
 <style>
   .intro {
     display: flex;
-    & :global(h2) {
-      color: var(--color-secondary);
-      font-size: 2em;
-      font-weight: 400;
-    }
 
     @media (max-width: 720px) {
       flex-direction: column;
@@ -28,24 +23,14 @@ const Markdown = md.Content;
     }
   }
 
-  .avatar {
-    height: 20em;
-    flex-shrink: 0;
-    @media (max-width: 720px) {
-      width: 70%;
-      margin: 15% auto;
-    }
-  }
-
   .content {
-    padding-right: 0px;
-    line-height: 1.8em;
+    padding-left: 0px;
     @media (max-width: 720px) {
-      :is(h2) {
-        text-align: center;
-      }
-      padding-left: 0;
       padding: 0 1em;
+    }
+
+    @media print {
+      padding-left: 0px;
     }
   }
 </style>

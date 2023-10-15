@@ -3,10 +3,8 @@
 
 ## Hi, I'm Lance
 
-Being in touch with dynamic image, photography and design during college, finally get into front-end. The path I walked let me have more sensitivity of design.
+With about two years work experience, I have experience developing various company products, including graphical applications, charting tools, marketing games, and associated editors. From a technical perspective, I am primarily skilled in frontend development tools and the React ecosystem.
 
-I believe "You become Software developer first, then Front-end developer. ", so trying to fill the computer science basic knowledge vacancy.
+As a developer, I'm not in related major but the media and design. My diverse experience has given me empathy for users and a deep understanding of user experience in product development.
 
-The comic is my hobby continuously in seventeen years. Otherwise, I love everything about photography and motorcycle. 
-
-In half year, I establish my blog, and read first and second chapter of "Structure and Interpretation of Computer Programs". And I'm learning Typescript and Test-driven-development recently.
+Apart from my professional work, I enjoy exploring various technologies, attending conferences, and occasionally contributing to open-source projects. Lately, I've been delving into Next.js and SSR-related technologies. Outside of my development work, I also engage in calisthenics training.
