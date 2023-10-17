@@ -6,6 +6,7 @@
 ### Frontend
 
 - 使用 React 近四年的經驗，熟悉狀態管理(Redux, React-query 等), UI 方案 (CSS in JS, UI lib) 等套件生態
+- 能以 Restful 和 GraphQL 的方式與後端串接 API
 - 有能力獨立建構工程化之 SPA 應用技術棧，包含打包、自動化測試、mono-repo及組件庫管理等功能。
 - 熟悉使用 Astro 進行靜態網站的開發，並搭建 CMS 管理系統
 

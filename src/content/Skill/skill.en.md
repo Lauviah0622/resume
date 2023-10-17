@@ -6,6 +6,7 @@
 ### Frontend
 
 - Four years of experience in utilizing React. Familiar with state management (Redux, React-query etc.), UI solutions (CSS-in-JS, UI libs).
+- Fetching data with RESTful or GraphQL API.
 - Able to construct engineered SPA application technology stack, including packaging, automated testing, mono-repo, and component library management.
 - Build static site with Astro and connect to CMS for content generation
 
