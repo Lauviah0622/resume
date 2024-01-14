@@ -48,7 +48,7 @@ html {
 
   @media print {
     font-size: 10pt;
-    line-height: 1.1em;
+    line-height: 1.2em;
   }
 }
 
@@ -67,6 +67,13 @@ body {
   }
 }
 
+body[lang*="en"] {
+  @media print {
+    font-size: 8pt;
+    line-height: 1.2em;
+  }
+}
+
 main {
   margin: 4em auto;
   padding: 4em;
@@ -78,7 +85,7 @@ main {
   @media print {
     width: 100%;
     box-shadow: none;
-    padding: 1.5cm;
+    padding-inline: 1.5cm  !important;
     line-break: loose;
     word-wrap: break-word;
     word-break: break-all;
@@ -109,7 +116,7 @@ section {
 
   @media print {
     padding-bottom: 0cm;
-    margin-block-end: 2.5em;
+    margin-block-end: 1.5em !important; 
   }
 
   @media (max-width: 720px) {

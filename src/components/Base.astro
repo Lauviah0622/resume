@@ -2,8 +2,10 @@
 import '../style/global.css';
 import Floating from './Floating.astro';
 
-export interface Props extends BlockProps {}
-const { lang = 'tw' } = Astro.props;
+export interface Props {
+  lang: string;
+}
+const { lang = 'zh-TW' } = Astro.props;
 ---
 
 <style>
@@ -19,7 +21,7 @@ const { lang = 'tw' } = Astro.props;
     }
 
     @media print {
-      gap: 0.5em;
+      gap: 0em;
     }
 
     @media (max-width: 960px) {
@@ -45,7 +47,7 @@ const { lang = 'tw' } = Astro.props;
     />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-  <body>
+  <body lang="en">
     <main>
       <h1>Lance Fang</h1>
       <div>
