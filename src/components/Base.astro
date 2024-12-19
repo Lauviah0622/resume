@@ -21,6 +21,10 @@ const { lang = 'zh-TW' } = Astro.props;
 
       &:empty {
         flex-basis: 0;
+
+        @media print {
+          display: none;
+        }
       }
     }
 
