@@ -1,24 +1,27 @@
 ### Programming Language
 
-- Proficient in ESnext, CSS, and HTML concepts, principles, and ecosystems, with the ability to execute on various devices and browsers.
-- Proficient in creating TypeScript project configurations and developing.
+- Proficient in ESNext, CSS, and HTML, with a solid understanding of their concepts, principles, and ecosystems, as well in various runtimes (e.g., browser, server).
+- Experienced in TypeScript and its related concepts, skilled in developing reusable libraries.
+- Other programming languages: C, Elixir, Scheme.
 
 ### Frontend
 
-- Four years of experience in utilizing React. Familiar with state management (Redux, React-query etc.), UI solutions (CSS-in-JS, UI libs).
-- Fetching data with RESTful or GraphQL API.
-- Able to construct engineered SPA application, including packaging, automated testing, mono-repo, and component library management.
-- Build static site with Astro and connect to CMS for content generation
+- Five years of experience with React, with expertise in state management, styling, components, and related libraries ecosystems. 
+- Proficient in integrating APIs using both RESTful and GraphQL approaches.
+- Skilled in building engineering-driven frontend projects, including bundling, automated testing, mono-repo, and component library management.
+- Experienced in frontend automated testing (unit tests, integration tests).
+- Proficient in developing static websites with Astro and integrating CMS systems.
 
 ### Backend
 
-- Built Node.js backend applications, connecting seamlessly to Postgresql and deploying on AWS.
+- Experienced in full-stack backend service development within the JavaScript ecosystem, covering APIs, databases, and deployment processes.
 
 ### UI/UX
 
-- Design and prototyping the UI with Figma. And crafted materials using graphic software (AI, PS).
+- Besides collaboration with designer and a good understanding of the UI design process. Experienced in designing creating prototypes with Figma.
+- Producing graphic assets with Illustrator and Photoshop.
 
 ### Other
-- Proficient in Git CLI and associated tools, collaborating with development teams or open-source projects on platforms like Github and Gitlab. 
-- Establishing streamlined CI/CD processes using Github Actions.
-- Collaborate with ChatGPT in needed like create Regex syntax and transform data format
+
+- Proficient in Git and hosting platforms, with experience in team collaboration and setting up simple CI/CD pipelines.
+- Skilled in CLI tools.

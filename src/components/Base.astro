@@ -13,11 +13,15 @@ const { lang = 'zh-TW' } = Astro.props;
     display: flex;
     gap: 1em;
     & .left {
-      flex: 0 0 60%;
+      flex: 1 1 auto;
     }
 
     & .right {
-      flex: 1 1 auto;
+      flex: 1 0 35%;
+
+      &:empty {
+        flex-basis: 0;
+      }
     }
 
     @media print {

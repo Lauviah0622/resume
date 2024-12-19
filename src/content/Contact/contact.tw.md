@@ -1,5 +1,0 @@
-- 方承宥
-- lauviah0622@gmail.com
-- +886 960775000
-- Lauviah0622
-- Lavif.me

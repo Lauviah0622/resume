@@ -14,6 +14,20 @@ import Intro from '../blocks/Intro.astro';
   <Skill slot="left" lang="en" />
   <Experience slot="left" lang="en" />
   <Projects slot="left" lang="en" />
-  <Contact slot="right" lang="en" />
-  <Education slot="right" lang="en" />
+  <div slot="left" class="container">
+    <Contact lang="en"/>
+    <Education lang="en"/>
+  </div>
 </Base>
+
+<style>
+  .container {
+    display: flex;
+    gap: 2ch;
+    width: 100%;
+  
+    & > :global(*) {
+      flex: 1 1 auto;
+    }
+  }
+</style>

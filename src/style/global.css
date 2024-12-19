@@ -22,7 +22,7 @@
     10.2px 16.9px 22.2px -1.8px hsl(var(--shadow-color) / 0.34),
     15.5px 25.6px 33.7px -2.1px hsl(var(--shadow-color) / 0.34),
     22.9px 37.8px 49.7px -2.5px hsl(var(--shadow-color) / 0.34);
-  /* https://www.joshwcomeau.com/shadow-palette/ */
+  /* gen by https://www.joshwcomeau.com/shadow-palette/ */
 
   /* TODO use global variable as gap size  */
 }
@@ -147,6 +147,10 @@ ul {
 
   @media print {
     margin-block-end: 0.2em;
+  }
+
+  & ul {
+    margin-block-end: 0;
   }
 }
 
