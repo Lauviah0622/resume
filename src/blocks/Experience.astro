@@ -19,17 +19,22 @@ const mds = multilangSpliter(files, lang, true);
 <Block header="Experiece">
   <div class="content">
     {
-      mds.map(({ frontmatter, Content }) => {
-        return (
-          <Period
-            to={frontmatter.to}
-            from={frontmatter.from}
-            company={frontmatter.company}
-          >
-            <Content />
-          </Period>
-        );
-      })
+      mds
+        .sort(
+          (a, b) =>
+            +new Date(b.frontmatter.from) - +new Date(a.frontmatter.from)
+        )
+        .map(({ frontmatter, Content }) => {
+          return (
+            <Period
+              to={frontmatter.to}
+              from={frontmatter.from}
+              company={frontmatter.company}
+            >
+              <Content />
+            </Period>
+          );
+        })
     }
   </div>
 </Block>
