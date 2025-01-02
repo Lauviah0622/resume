@@ -34,7 +34,7 @@ const { to, from, company } = Astro.props;
 <div class="container">
   <div class={'cover'}>
     <h3>{company}</h3>
-    <h4>{formatDate(from)} - {formatDate(to)}</h4>
+    {from && to && <h4>{formatDate(from)} - {formatDate(to)}</h4>}
   </div>
   <div>
     <slot />

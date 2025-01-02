@@ -20,10 +20,13 @@ const mds = multilangSpliter(files, lang, true);
   <div class="content">
     {
       mds
-        .sort(
-          (a, b) =>
-            +new Date(b.frontmatter.from) - +new Date(a.frontmatter.from)
-        )
+        .sort((a, b) => {
+          if (!b.frontmatter.from || !a.frontmatter.from) {
+            return 1;
+          }
+          
+          return +new Date(b.frontmatter.from) - +new Date(a.frontmatter.from);
+        })
         .map(({ frontmatter, Content }) => {
           return (
             <Period
