@@ -2,7 +2,7 @@
 title: Front-end Developer
 company: 'Pinkoi'
 from: '2023-12-06'
-to: 'current'
+to: '2025-02-21'
 ---
 
 - 開發賣家商品設定後台及前台功能，技術使用 Typescript, React, Zustand 以及 Webpack 等
