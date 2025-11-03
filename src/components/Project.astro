@@ -3,9 +3,10 @@ export interface Props {
   title: string;
   link: string;
   repo?: string;
+  links?: Record<string, string>;
 }
 
-const { title, link, repo } = Astro.props;
+const { title, link, repo, links = {} } = Astro.props;
 ---
 
 <style>
@@ -44,6 +45,15 @@ const { title, link, repo } = Astro.props;
           repo
         </a>
       )
+    }
+    {
+      Object.entries(links).map(([title, link]) => {
+        return (
+          <a target="_blank" href={link}>
+            {title}
+          </a>
+        );
+      })
     }
   </div>
   <slot />

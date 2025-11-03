@@ -7,7 +7,7 @@ export interface Props extends BlockProps {}
 
 const { lang = 'tw' } = Astro.props;
 
-const files = await Astro.glob('../content/projects/*.md');
+const files = await Astro.glob('../content/projects/*.{md, mdx}');
 const mds = multilangSpliter(files, lang, true);
 ---
 
@@ -26,6 +26,7 @@ const mds = multilangSpliter(files, lang, true);
             title={frontmatter.title}
             link={frontmatter.link}
             repo={frontmatter.repo}
+            links={frontmatter.links}
           >
             <Content />
           </Project>

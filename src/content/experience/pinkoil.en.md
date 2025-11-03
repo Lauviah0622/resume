@@ -2,7 +2,7 @@
 title: Front-end Developer
 company: 'Pinkoi'
 from: '2023-12-06'
-to: 'current'
+to: '2025-02-21'
 ---
 
 - Developed seller product configuration features for both backend and frontend using TypeScript, React, Zustand, and Webpack.

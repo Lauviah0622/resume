@@ -7,4 +7,4 @@ Experienced in experience in graphical applications, charting tools, marketing c
 
 My journey began in design than transitioned into programming, which has brought me empathy for end-users and passionate about user experience.
 
-I enjoy exploring various techs, attending conferences, and occasionally contributing to open-source projects. Lately, I've been delving into C Lang and Linux. Besides programming, I've been into calisthenic training.
+Outside of work, I like to explore new and interesting technologies and occasionally contribute to open-source projects. Recently I’ve been spending more time on backend and mobile app development. Beyond coding, I’m currently learning to play the trumpet.
