@@ -1,7 +1,7 @@
 ### Programming Language
 
 - 熟悉 ESnext, CSS, HTML 觀念、原理、生態，並於不同環境（browser, server 等）上執行
-- 熟悉 Typescript 及相關概念，並開發可重用之元件和程式庫
+- 熟悉 Typescript 及相關概念，並有能力開發可重用之元件和程式庫
 - 其他程式語言：Dart, shell, C, Elixir, Scheme (依熟悉程度排序)
 
 ### Frontend
@@ -21,13 +21,13 @@
 ### Mobile App
 
 - 使用 React Native, Flutter 開發雙平台 App
-- iOS / Android bundle、簽章與基本上架設定
+- iOS / Android App bundle、簽章與基本上架設定
 
 ### UI/UX
 
-- 與設計師進行協作與理解 UI 設計流程外。有能力使用 Figma 設計完整 UI、建立 Prototype 並使用軟體 (Illustrator, Photoshop) 製作相關素材
+- 使用 Figma 設計完整 UI 及元件、建立 Prototype。並使用軟體 (Illustrator, Photoshop) 製作相關素材
 
 ### Misc
 
 - 熟悉 Git 和託管平台並與團隊進行協作，以及建立簡易的 CI/CD 流程
-- 熟悉 cli 相關工具使用，並能撰寫 shell script 腳本
+- 熟悉 cli 相關工具使用，及撰寫 shell script 腳本
