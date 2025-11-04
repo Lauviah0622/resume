@@ -21,7 +21,7 @@
 ### Mobile App
 
 - Developed cross-platform mobile apps using React Native and Flutter.
-- Knowledge of iOS / Android bundling, code signing, and basic store publishing configuration.
+- Knowledge of iOS / Android bundling, signing, and basic publishing configuration.
 
 ### UI/UX
 

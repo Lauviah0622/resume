@@ -1,8 +1,8 @@
 ---
 title: Bandwagon 今日球迷 (ongoing)
 cover: /blog.png
-repo: https://github.com/Sonaiv-Lab/bandwagon
 links:
+  repo: https://github.com/Sonaiv-Lab/bandwagon
   Android apk: https://github.com/Sonaiv-Lab/bandwagon/releases/tag/0.2.2
 ---
 
@@ -26,6 +26,6 @@ links:
   - 爬蟲服務以 Docker Compose 佈署在 GCE，搭配 MIG + Spot VM 建立 worker pool，以降低長時間運算成本
   - 區分 scheduler / worker 服務，可依賽事尖峰（比賽時段）彈性擴展爬蟲與處理資源
   - 撰寫多支 shell script（startup script、helper、service builder），自動化常見操作與佈署流程
-- TypeScript 與程式設計技巧
+- Misc
   - 深度使用 TypeScript：泛型、條件型別、branding type 等，建立嚴格的 domain model 與資料型別，確保各層資料結構的一致性與可維護性
   - 嚴格使用 zod 確保資料 input / output 無誤，並對錯誤資料進行修復、補全

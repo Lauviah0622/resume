@@ -24,6 +24,6 @@ Independent design and development of a baseball schedule & game-tracking app, a
   - Deployed crawling workers with Docker Compose on GCE, combined with MIG + Spot VMs to build a worker pool and reduce long-running compute costs.
   - Separated scheduler and worker services to scale crawling and processing capacity elastically during peak game times.
   - Wrote multiple shell scripts (startup scripts, helpers, service builders) to automate common operations and deployment workflows.
-- TypeScript & Data Validation
+- Misc
   - Heavily used TypeScript features (generics, conditional types, branding types, etc.) to define strict domain models and data types, ensuring consistency and maintainability across all layers.
   - Used Zod to strictly validate all input/output data, and implemented logic to repair or fill in incomplete or inconsistent records.
