@@ -9,7 +9,8 @@
 - Seven years of experience using React; familiar with the surrounding ecosystem, including state management, styling, and component libraries.
 - Proficient in integrating APIs using both RESTful and GraphQL approaches.
 - Skilled in building engineering-driven frontend projects, including bundling, automated testing, mono-repo, and component library management.
-- Experienced in frontend automated testing (unit tests, integration tests).
+- Experienced in frontend auto
+mated testing (unit tests, integration tests).
 - Proficient in developing static websites with Astro and integrating CMS systems.
 
 ### Backend
@@ -18,7 +19,7 @@
 - Experience with Docker, Docker Compose, and related deployment strategies.
 - Able to operate cloud infrastructure (familiar with GCP) and manage Infrastructure as Code (IaC).
 
-### Mobile App
+### Mobile
 
 - Developed cross-platform mobile apps using React Native and Flutter.
 - Knowledge of iOS / Android bundling, signing, and basic publishing configuration.

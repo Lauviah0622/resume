@@ -18,10 +18,10 @@
 - Docker, Docker compose 及相關部署策略
 - 操作雲端基礎設施（熟悉 GCP 平台），並能進行 Infrastructure as code (IaC) 管理
 
-### Mobile App
+### Mobile
 
 - 使用 React Native, Flutter 開發雙平台 App
-- iOS / Android App bundle、簽章與基本上架設定
+- iOS / Android App bundling、簽章與基本上架設定
 
 ### UI/UX
 
