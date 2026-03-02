@@ -6,9 +6,9 @@
 
 ### Frontend
 
-- 使用 React 七年的經驗，熟悉狀態管理、 樣式、元件等 library 相關生態
+- 主要使用 React，熟悉相關狀態管理、 樣式、元件等 library 相關生態
 - 熟悉 Restful 和 GraphQL 的方式與後端串接 API
-- 建構工程化之前端專案，包含打包、自動化測試、mono-repo 及組件庫管理等
+- 建構工程化之前端專案，包含 bundling、自動化測試、monorepo 及組件庫管理等
 - 熟悉前端自動化測試 (unit test, integration test)
 - 熟悉使用 Astro 進行靜態網站的開發，以及串接 CMS 管理系統
 

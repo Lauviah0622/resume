@@ -6,7 +6,7 @@
 
 ### Frontend
 
-- Seven years of experience using React; familiar with the surrounding ecosystem, including state management, styling, and component libraries.
+- Very experienced in React; familiar with the surrounding ecosystem, including state management, styling, and component libraries.
 - Proficient in integrating APIs using both RESTful and GraphQL approaches.
 - Skilled in building engineering-driven frontend projects, including bundling, automated testing, mono-repo, and component library management.
 - Experienced in frontend auto
