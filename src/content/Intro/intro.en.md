@@ -1,9 +1,6 @@
 ---
 ---
 
-## Hi, I'm Lance
+Frontend engineer with system thinking and product awareness.
 
-Experienced in experience in graphical applications, charting tools, marketing campaign  editors and E-commerce. From a technical perspective, I am primarily skilled in frontend development tools and the React ecosystem.
-
-My journey began in design than transitioned into programming, which has brought me empathy for end-users and passionate about user experience.
-
+Experienced in building UI systems, large-scale product frontend. Background spans product frontend development, frontend platform architecture, and independent system design projects.

@@ -9,14 +9,14 @@ import Education from '../blocks/Education.astro';
 import Intro from '../blocks/Intro.astro';
 ---
 
-<Base lang='zh-TW'>
+<Base lang="zh-TW">
   <Intro />
   <Skill slot="left" />
   <Experience slot="left" />
-  <Projects slot="left" />
+  <Projects slot="left" className='unbreak'/>
   <div slot="left" class="container">
-    <Contact/>
-    <Education/>
+    <Contact />
+    <Education />
   </div>
 </Base>
 
@@ -25,7 +25,7 @@ import Intro from '../blocks/Intro.astro';
     display: flex;
     gap: 2ch;
     width: 100%;
-  
+
     & > :global(*) {
       flex: 1 1 auto;
     }

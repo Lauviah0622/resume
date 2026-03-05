@@ -31,7 +31,7 @@ const { to, from, company } = Astro.props;
     }
   }
 </style>
-<div class="container">
+<div class="container unbreak">
   <div class={'cover'}>
     <h3>{company}</h3>
     {from && to && <h4>{formatDate(from)} - {formatDate(to)}</h4>}

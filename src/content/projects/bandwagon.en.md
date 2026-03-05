@@ -1,12 +1,12 @@
 ---
-title: Bandwagon — 體育資料處理基礎架構原型
+title: Bandwagon — Baseball Game Data Processing Prototype
 links:
   repo: https://github.com/Sonaiv-Lab/bandwagon
 ---
 
-Designed and implemented a cost-efficient sports data pipeline handling unstable third-party sources.
+Independent project **exploring system architecture beyond frontend** in baseball topic, focusing on real-world constraints such as unstable data sources and limited infrastructure budget.
 
-- Designed a data pipeline to process unstable third-party data sources
-- Implemented a scalable job orchestration and worker architecture
-- Optimized infrastructure cost and system evolvability under strict budget constraints
-- Designed and developed the mobile application
+- Designed a **data pipeline** to process unstable third-party data sources
+- Implemented a scalable **job orchestration and worker architecture**
+- Optimized **infrastructure cost and system evolvability** under strict budget constraints
+- Designed and developed a mobile client application

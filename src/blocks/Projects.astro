@@ -5,7 +5,7 @@ import multilangSpliter from '../utils/multilangSpliter.js';
 
 export interface Props extends BlockProps {}
 
-const { lang = 'tw' } = Astro.props;
+const { lang = 'tw', className } = Astro.props;
 
 const files = await Astro.glob('../content/projects/*.{md, mdx}');
 const mds = multilangSpliter(files, lang, true);
@@ -17,7 +17,7 @@ const mds = multilangSpliter(files, lang, true);
     flex-direction: column;
   }
 </style>
-<Block header="Projects">
+<Block header="Projects" className={className}>
   <div class="content">
     {
       mds.map(({ frontmatter, Content }) => {

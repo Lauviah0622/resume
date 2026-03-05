@@ -113,9 +113,16 @@ div {
   box-sizing: border-box;
 }
 
+.unbreak {
+  break-inside: avoid;
+}
+
+.break {
+  break-before: avoid;
+}
+
 section {
   margin-block-end: 2em;
-  page-break-inside: avoid;
 
   @media print {
     padding-bottom: 0cm;
@@ -212,7 +219,7 @@ column-count: 2;
 }
 
 ul {
-  padding-left: 1em;
+  padding-left: 1.5em;
 
   @media (max-width: 720px) {
     padding-left: 2em;

@@ -8,6 +8,10 @@ const { header, className } = Astro.props;
 ---
 
 <style>
+  .block {
+    break-after: auto;
+  }
+
   .header {
     margin-block-end: 1.5em;
 
@@ -20,7 +24,7 @@ const { header, className } = Astro.props;
     border: var(--color-secondary) solid 1px;
   }
 </style>
-<section class:list={[className]}>
+<section class:list={[className, 'block']}>
   <div class="header">
     <h2>
       {header}

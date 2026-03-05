@@ -5,6 +5,7 @@ from: '2022-07-01'
 to: '2023-11-23'
 ---
 
-Developed a visualization application tailored for NoSQL graph databases:
-- Utilized React alongside Pixi.js for efficient Canvas rendering, enabling the display of over 1,000 nodes while maintaining interactive features such as drag-and-drop, style adjustments, and clustering.
-- Simplified the rendering model and interface to better suit lightweight static use cases, such as document previews and style configuration.
+Focused on **high-performance NoSQL graph database visualization** toll with React + Pixi.js.
+
+- Enabled interaction with 1000+ nodes while maintaining smooth user interaction (dragging, styling, clustering)
+- Simplified rendering and API design for lightweight use cases such as documentation previews
