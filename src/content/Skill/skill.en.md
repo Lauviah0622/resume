@@ -1,29 +1,15 @@
-### Architecture & System design
-- Monorepo architecture
-- Design system management
-- Frontend scalability & state modeling
-- System design: data pipeline ,Job orchestration, infra cost optimization
 
-### Frontend Engineering
-- React ecosystem framework: React, Nextjs
-- state management: TanStack Query, Zustand
-- Testing strategy
-- i18n workflow
-- styling solutions
+### React & Frontend Architecture
+Build and maintain product-scale React / Next.js applications with TypeScript, focusing on component boundaries, routing structure, state modeling, and long-term maintainability.
 
-### Platform  / Backend
-- Nodejs backend: API service, crawler app
-- Data base: redis, Firestore, SQL
-- GCP deployment
-- Docker & container workflow
-- CI/CD automation
-- Infrastructure as code
+### State Management & Data Flow
+Design frontend state strategies with TanStack Query, Zustand, and React patterns, separating server state, client UI state, workflow state, and error handling.
 
-### Client Platforms
+### Repository & UI System Governance
+Work with Nx monorepo, shared UI modules, Storybook, component testing, design tokens, and reusable frontend utilities across multiple React / Next.js applications.
 
-- Flutter / React Native
-- Mobile build / distribution workflows
+### Interactive UI Exposure
+Have hands-on experience with graph/canvas-based interfaces using React and Pixi.js, and editor-style data modeling through a Slate.js Markdown editor prototype.
 
-### Misc
-- Understanding UI/UX methodology and possess the ability to independently design products using tools (Figma, Illustrator, etc.)
-- Programming language: JavaScript, TypeScript, Dart, Shell, Elixir,  C, Scheme (by familiarity)
+### Platform Understanding
+Have practical experience with Node.js, Redis, Firestore, SQL, Docker, GCP, and CI/CD workflows to support frontend-product integration.

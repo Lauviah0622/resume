@@ -1,6 +1,5 @@
 ---
 ---
+Frontend Engineer with a focus on React product development, state management, and frontend architecture.
 
-Frontend engineer with system thinking and product awareness.
-
-Experienced in building UI systems, large-scale product frontend. Background spans product frontend development, frontend platform architecture, and independent system design projects.
+Experienced in building and maintaining product-scale React / TypeScript applications, shared UI modules, and stateful product workflows. Also have practical exposure to graph/canvas-based interfaces and editor-style data modeling.

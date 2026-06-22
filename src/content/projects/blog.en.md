@@ -3,6 +3,7 @@ title: Personal Blog
 cover: /blog.png
 link: https://lavif.me/
 repo: https://github.com/Lauviah0622/blog
+display: false
 ---
 
 Astro + React + Markdown blog focused on software engineering topics.
